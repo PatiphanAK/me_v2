@@ -1,0 +1,51 @@
+[
+  { 
+    "name": "VS Code", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png", 
+    "color": "#007ACC", 
+    "description": "Lightweight yet powerful source code editor with extensions", 
+    "tags": ["Extensions", "IntelliSense", "Debugging", "Git Integration", "Live Share"] 
+  },
+  { 
+    "name": "Vim", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1022px-Vimlogo.svg.png", 
+    "color": "#019733", 
+    "description": "Highly configurable text editor for efficient code editing", 
+    "tags": ["Modes", "Macros", "Plugins", "Keybindings", "NeoVim"] 
+  },
+  { 
+    "name": "NeoVim", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg", 
+    "color": "#57A143", 
+    "description": "A hyperextensible Vim-based text editor built to be a modern foundation for text editing.", 
+    "tags": ["Vimscript", "Lua", "LSP", "Plugins", "Terminal"] 
+  },
+  { 
+    "name": "Git", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1024px-Git-logo.svg.png", 
+    "color": "#F05032", 
+    "description": "Distributed version control system for tracking changes", 
+    "tags": ["Branching", "Merging", "Rebasing", "Remote", "Hooks"] 
+  },
+  { 
+    "name": "GitHub", 
+    "logoUrl": "https://cdn.prod.website-files.com/5f10ed4b2ae6bc09c03f5d7a/64959d5f65a257fb51a4259c_github.png", 
+    "color": "#181717", 
+    "description": "Web-based Git repository hosting service with collaboration features", 
+    "tags": ["Repositories", "Pull Requests", "Issues", "Actions", "CI/CD"] 
+  },
+  { 
+    "name": "GitLab", 
+    "logoUrl": "https://avatars.githubusercontent.com/u/1086321?s=280&v=4", 
+    "color": "#FCA326", 
+    "description": "A complete DevOps platform for managing code, CI/CD, and project workflows", 
+    "tags": ["CI/CD", "Project Management", "DevSecOps", "Runners", "Pipelines"] 
+  },
+  { 
+    "name": "Colab", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Colaboratory_SVG_Logo.svg/1024px-Google_Colaboratory_SVG_Logo.svg.png", 
+    "color": "#F9AB00", 
+    "description": "Cloud-based Jupyter notebook environment for data science and machine learning", 
+    "tags": ["Jupyter", "Python", "Notebooks", "GPU", "TensorFlow", "PyTorch"] 
+  } 
+]

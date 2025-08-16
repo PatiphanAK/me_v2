@@ -1,0 +1,37 @@
+[
+  {
+    "name": "PostgreSQL",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+    "color": "#336791",
+    "description": "Powerful, open-source object-relational database system.",
+    "tags": ["Relational", "SQL", "Open Source", "Robust", "Extensible"]
+  },
+  {
+    "name": "MySQL",
+    "logoUrl": "https://cdn-icons-png.flaticon.com/512/5968/5968313.png",
+    "color": "#4479A1",
+    "description": "The world's most popular open-source relational database.",
+    "tags": ["Relational", "SQL", "Open Source", "Web Applications", "ACID"]
+  },
+  {
+    "name": "MongoDB",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
+    "color": "#47A248",
+    "description": "A NoSQL document database designed for scalability and developer agility.",
+    "tags": ["NoSQL", "Document", "Scalable", "Flexible Schema", "BSON"]
+  },
+  {
+    "name": "Neo4j",
+    "logoUrl": "https://www.borntodev.com/wp-content/uploads/2024/04/image-81.png",
+    "color": "#008CC9",
+    "description": "A native graph database that provides unmatched performance and flexibility.",
+    "tags": ["Graph", "Cypher", "Relationships", "Nodes", "Graph Traversal"]
+  },
+  {
+    "name": "Redis",
+    "logoUrl": "https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png",
+    "color": "#DC382D",
+    "description": "An open-source, in-memory data structure store, used as a database, cache and message broker.",
+    "tags": ["In-memory", "Key-value", "Cache", "High Performance", "Real-time"]
+  }
+]

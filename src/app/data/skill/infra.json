@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Docker",
+    "logoUrl": "https://images.icon-icons.com/2699/PNG/512/docker_logo_icon_170244.png",
+    "color": "#2496ED",
+    "description": "Containerization platform for application deployment",
+    "tags": ["Containers", "Images", "Dockerfile", "Compose"]
+  },
+  {
+    "name": "Kubernetes",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1024px-Kubernetes_logo_without_workmark.svg.png",
+    "color": "#326CE5",
+    "description": "Container orchestration system for automating deployment",
+    "tags": ["Pods", "Services", "ConfigMaps", "Ingress", "Helm"]
+  },
+  {
+    "name": "AWS",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png",
+    "color": "#FF9900",
+    "description": "These are the AWS services I have worked with in real-world projects",
+    "tags": ["Lambda", "CloudFormation", "S3", "EC2", "SageMaker", "API Gateway", "RDS", "DynamoDB"]
+  },
+  {
+    "name": "Google Cloud",
+    "logoUrl": "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png",
+    "color": "#4285F4",
+    "description": "Cloud computing services for modern applications",
+    "tags": ["Compute Engine", "Cloud Storage", "Cloud Functions", "Kubernetes Engine"]
+  },
+    {
+    "name": "Containerd",
+    "logoUrl": "https://camo.githubusercontent.com/98539974448e1b99af4d462f9fe1eedea5c6512035bc47a2d76fceb64092c99a/68747470733a2f2f636f6e7461696e6572642e696f2f696d672f6c6f676f732f69636f6e2f626c61636b2f636f6e7461696e6572642d69636f6e2d626c61636b2e706e67",
+    "color": "#3B4B5B",
+    "description": "An industry-standard container runtime for managing the complete container lifecycle.",
+    "tags": ["Container Runtime", "OCI", "Lifecycle", "CRI", "Image Distribution"]
+  },
+  {
+    "name": "ArgoCD",
+    "logoUrl": "https://cdn.prod.website-files.com/5f10ed4c0ebf7221fb5661a5/5f2ba11e378c8f49e8b28486_argo.png",
+    "color": "#EF4444",
+    "description": "A declarative GitOps continuous delivery tool for Kubernetes.",
+    "tags": ["GitOps", "CD", "Kubernetes", "Continuous Delivery", "Declarative"]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  { 
+    "name": "PyTorch", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PyTorch_logo_icon.svg/1024px-PyTorch_logo_icon.svg.png", 
+    "color": "#EE4C2C", 
+    "description": "Dynamic neural network framework for research and production", 
+    "tags": ["Tensors", "Autograd", "DataLoader", "Transforms", "CUDA"] 
+  },
+  {
+    "name": "PyTorch Lightning",
+    "logoUrl": "https://avatars.githubusercontent.com/u/58386951?v=4",
+    "color": "#792EE5",
+    "description": "A lightweight PyTorch wrapper for scalable deep learning, abstracting away the boilerplate.",
+    "tags": ["Boilerplate Abstraction", "Callbacks", "Logger", "Distributed Training", "Reproducibility"]
+  },
+  { 
+    "name": "OpenCV", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OpenCV_Logo_with_text_svg_version.svg/1024px-OpenCV_Logo_with_text_svg_version.svg.png", 
+    "color": "#5C3EE8", 
+    "description": "Computer vision library for image and video processing", 
+    "tags": ["Image Processing", "Feature Detection", "Object Tracking", "Face Recognition"] 
+  },
+  { 
+    "name": "NumPy", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1024px-NumPy_logo_2020.svg.png", 
+    "color": "#013243", 
+    "description": "Fundamental package for scientific computing with Python", 
+    "tags": ["Arrays", "Broadcasting", "Linear Algebra", "FFT", "Random"] 
+  },
+  { 
+    "name": "Scikit-learn", 
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1024px-Scikit_learn_logo_small.svg.png", 
+    "color": "#F7931E", 
+    "description": "Machine learning library for Python", 
+    "tags": ["Classification", "Regression", "Clustering", "Model Selection"] 
+  },
+  { 
+    "name": "Hugging Face", 
+    "logoUrl": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg", 
+    "color": "#FFD21E", 
+    "description": "Platform for sharing and deploying machine learning models", 
+    "tags": ["Transformers", "Datasets", "Tokenizers", "Model Hub", "Inference API"] 
+  },
+  { 
+    "name": "LangChain", 
+    "logoUrl": "https://python.langchain.com/img/brand/wordmark.png", 
+    "color": "#1C3C3C", 
+    "description": "Framework for developing applications with large language models", 
+    "tags": ["LLM", "Chains", "Agents", "Memory", "Vector Stores"] 
+  },
+  { 
+    "name": "CrewAI", 
+    "logoUrl": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/crewai-color.png", 
+    "color": "#6366F1", 
+    "description": "Multi-agent framework for orchestrating role-playing autonomous AI agents", 
+    "tags": ["Multi-Agent", "Role-Playing", "Task Automation", "Agent Orchestration"] 
+  },
+  { 
+    "name": "Roboflow", 
+    "logoUrl": "https://www.mindphp.com/forums/download/file.php?id=164920", 
+    "color": "#6366F1", 
+    "description": "Computer vision platform for dataset management and model deployment", 
+    "tags": ["Dataset Management", "Annotation", "Model Training", "Deployment", "Auto-ML"] 
+  },
+  { 
+    "name": "Pillow", 
+    "logoUrl": "https://python-pillow.github.io/assets/images/pillow-logo-248x250.png", 
+    "color": "#306998", 
+    "description": "Python Imaging Library for opening, manipulating, and saving images", 
+    "tags": ["Image Processing", "Filters", "Transformations", "Format Support", "PIL"] 
+  },
+{
+    "name": "ONNX",
+    "logoUrl": "https://onnx.ai/onnx/_static/onnx-horizontal-color.png",
+    "color": "#000000",
+    "description": "An open format to represent machine learning models, enabling model interoperability between different frameworks.",
+    "tags": ["Interoperability", "Model Exchange", "Inference", "Optimization"]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "title": "Computer Science Foundation",
+    "skills": [
+      {
+        "name": "Data Structure & Algorithm - Advanced problem solving and optimization techniques",
+        "link": "https://en.wikipedia.org/wiki/Data_structure"
+      },
+      {
+        "name": "Object Oriented Programming - Design patterns and architectural principles",
+        "link": "https://en.wikipedia.org/wiki/Object-oriented_programming"
+      }
+    ],
+    "icon": "Brain",
+    "color": "bg-gradient-to-r from-blue-600 to-blue-700",
+    "bgGradient": "bg-gradient-to-br from-blue-900/40 to-blue-800/30 border-blue-400",
+    "link": "https://en.wikipedia.org/wiki/Computer_science"
+  },
+  {
+    "title": "Mathematics",
+    "skills": [
+      { 
+        "name": "Linear Algebra - Vector spaces and matrix operations", 
+        "link": "https://en.wikipedia.org/wiki/Linear_algebra" 
+      },
+      { 
+        "name": "Calculus - Differential and integral calculus applications", 
+        "link": "https://en.wikipedia.org/wiki/Calculus" 
+      },
+      { 
+        "name": "Differential Equations - Modeling complex systems", 
+        "link": "https://en.wikipedia.org/wiki/Differential_equation" 
+      },
+      { 
+        "name": "Probability & Statistics - Data analysis and inference", 
+        "link": "https://en.wikipedia.org/wiki/Probability" 
+      },
+      { 
+        "name": "Differential Geometry - Advanced geometric analysis", 
+        "link": "https://en.wikipedia.org/wiki/Differential_geometry" 
+      },
+      { 
+        "name": "Real Analysis - Rigorous mathematical foundations", 
+        "link": "https://en.wikipedia.org/wiki/Real_analysis" 
+      },
+      { 
+        "name": "Discrete Mathematics - Logic and combinatorics", 
+        "link": "https://en.wikipedia.org/wiki/Discrete_mathematics" 
+      },
+      { 
+        "name": "Computational Theory - Complexity analysis and algorithm design", 
+        "link": "https://en.wikipedia.org/wiki/Theory_of_computation" 
+      }
+    ],
+    "icon": "Math",
+    "color": "bg-gradient-to-r from-indigo-600 to-indigo-700",
+    "bgGradient": "bg-gradient-to-br from-indigo-900/40 to-indigo-800/30 border-indigo-400",
+    "link": "https://en.wikipedia.org/wiki/Mathematics"
+  },
+  {
+    "title": "Machine Learning & Deep Learning",
+    "skills": [
+      {
+        "name": "ML Fundamentals - Regression, k-NN, Clustering, SVM, PCA, Reinforcement Learning",
+        "link": "https://en.wikipedia.org/wiki/Machine_learning"
+      },
+      {
+        "name": "Deep Learning - ANN, CNN, GNN, RNN, LSTM, Fast RNN, Autoencoder architectures",
+        "link": "https://en.wikipedia.org/wiki/Deep_learning"
+      }
+    ],
+    "icon": "Cpu",
+    "color": "bg-gradient-to-r from-purple-600 to-purple-700",
+    "bgGradient": "bg-gradient-to-br from-purple-900/40 to-purple-800/30 border-purple-400",
+    "link": "https://en.wikipedia.org/wiki/Machine_learning"
+  },
+  {
+    "title": "Domain Specialization",
+    "skills": [
+      {
+        "name": "Computer Vision - Object Detection, Segmentation, Facial Recognition, Depth Estimation",
+        "link": "https://en.wikipedia.org/wiki/Computer_vision"
+      },
+      {
+        "name": "Natural Language Processing - Word Vectors, Embeddings, RAG, LLM, Tokenization",
+        "link": "https://en.wikipedia.org/wiki/Natural_language_processing"
+      }
+    ],
+    "icon": "BookOpen",
+    "color": "bg-gradient-to-r from-cyan-600 to-cyan-700",
+    "bgGradient": "bg-gradient-to-br from-cyan-900/40 to-cyan-800/30 border-cyan-400",
+    "link": "https://en.wikipedia.org/wiki/Artificial_intelligence"
+  },
+  {
+    "title": "System Design & Architecture",
+    "skills": [
+      { 
+        "name": "API & Communication - RESTful, gRPC, GraphQL, WebSocket, Server-Sent Events", 
+        "link": "https://en.wikipedia.org/wiki/API" 
+      },
+      { 
+        "name": "Message Brokers - Kafka, IBM MQ, HiveMQ for distributed systems", 
+        "link": "https://en.wikipedia.org/wiki/Message_broker" 
+      },
+      { 
+        "name": "Authentication - OAuth, JWT, Cookie-based authentication systems", 
+        "link": "https://en.wikipedia.org/wiki/Authentication" 
+      },
+      { 
+        "name": "Testing - Integration, Unit, and Functional testing methodologies", 
+        "link": "https://en.wikipedia.org/wiki/Software_testing" 
+      },
+      { 
+        "name": "Database Design - Indexing, CAP theorem, Sharding, Replication, ACID", 
+        "link": "https://en.wikipedia.org/wiki/Database_design" 
+      },
+      { 
+        "name": "Design Patterns - Monolithic, SOA, Microservices, Serverless architectures", 
+        "link": "https://en.wikipedia.org/wiki/Software_design_pattern" 
+      },
+      { 
+        "name": "Agentic Workflows - Sequential processing and automation" 
+      },
+      { 
+        "name": "CI/CD Principles - Continuous integration and deployment strategies", 
+        "link": "https://en.wikipedia.org/wiki/CI/CD" 
+      }
+    ],
+    "icon": "Layers",
+    "color": "bg-gradient-to-r from-green-600 to-green-700",
+    "bgGradient": "bg-gradient-to-br from-green-900/40 to-green-800/30 border-green-400",
+    "link": "https://en.wikipedia.org/wiki/Systems_architecture"
+  }
+]
