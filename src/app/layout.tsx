@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   description: 'Welcome to my portfolio website.',
   keywords: ['portfolio', 'web developer', 'typescript', 'nextjs', 'dinosaur'],
   authors: [{ name: 'Patiphan Akkahadsri' }],
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({

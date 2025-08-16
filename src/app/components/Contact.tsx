@@ -19,7 +19,7 @@ const Contacts: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-gray-300 text-sm">
-            Let's connect through any of these platforms.
+            Let&apos;s connect through any of these platforms.
           </p>
         </div>
         

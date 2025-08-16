@@ -1,6 +1,6 @@
 "use client";   
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Grid, List, Cloud, Sun, Wind } from 'lucide-react';
+import { Search, Grid, List, Cloud, Sun, Wind } from 'lucide-react';
 import { Project, FilterCategory, FilterStatus, ViewMode } from '@/app/types/project/project.type';
 import { ProjectCard } from '@/app/components/Card/ProjectCard';
 import { projectData } from '../data/project/project';

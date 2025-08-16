@@ -1,6 +1,6 @@
 'use client';
 
-import { Star, Sparkles, Heart, Code, Coffee, GamepadIcon } from "lucide-react";
+import { Star, Sparkles} from "lucide-react";
 import { AcademicBackgroundProps, ProfilePhotoProps } from "@/app/types/about/about.types";
 import TypingText from "@/app/components/typingtext";
 import Image from "next/image";
@@ -60,7 +60,7 @@ const AcademicBackground: React.FC<AcademicBackgroundProps> = ({
       <div className="flex-shrink-0">
         <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 overflow-hidden">
           {typeof icon === "string" ? (
-            <img src={icon} alt={title} className="w-full h-full object-cover" />
+            <Image src={icon} alt={title} width={48} height={48} className="w-full h-full object-cover" />
           ) : (
             icon
           )}
@@ -102,7 +102,7 @@ const ProfilePhoto: React.FC<ProfilePhotoProps> = ({ imageUrl, alt }) => (
     <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 p-1 shadow-2xl">
       <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
         {imageUrl ? (
-          <img src={imageUrl} alt={alt} className="object-cover w-full h-full rounded-full" />
+          <Image src={imageUrl} alt={alt ?? "Profile Photo"} width={160} height={160} className="object-cover w-full h-full rounded-full" />
         ) : (
           <div className="text-2xl sm:text-3xl lg:text-4xl text-purple-400">👨‍🚀</div>
         )}
