@@ -1,5 +1,4 @@
-import { Project } from '@/app/types/project/project.type';
-
+import { ProjectCategory, Project, ProjectStatus } from "@/app/types/project/project.type";
 export const projectData: Project[] = [
 
   {
@@ -11,8 +10,8 @@ export const projectData: Project[] = [
     techStack: ["Python", "NumPy", "SymPy", "Matplotlib"],
     tool: null,
     website: null,
-    status: "In-Progress",
-    category: "Notebook"
+    status: ProjectStatus.InProgress,
+    categories: [ProjectCategory.Notebook]
   },
   {
     id: 3,
@@ -23,8 +22,8 @@ export const projectData: Project[] = [
     techStack: ["Rust", "Axum", "PostgreSQL", "REST", "Shell"],
     tool: null,
     website: null,
-    status: "Active",
-    category: "Backend"
+    status: ProjectStatus.InProgress,
+    categories: [ProjectCategory.Backend]
   },
   {
     id: 4,
@@ -35,8 +34,8 @@ export const projectData: Project[] = [
     techStack: ["FastAPI", "PyTorch", "OCR", "LLM", "Python"],
     tool: null,
     website: null,
-    status: "Active",
-    category: "AI/ML"
+    status: ProjectStatus.InProgress,
+    categories: [ProjectCategory.AIML]
   },
   {
     id: 2,
@@ -47,8 +46,8 @@ export const projectData: Project[] = [
     techStack: ["Go", "Fiber", "Websocket", "Nuxt 3", "OAuth"],
     tool: null,
     website: null,
-    status: "Active",
-    category: "Real-time App"
+    status: ProjectStatus.Completed,
+    categories: [ProjectCategory.FullStack, ProjectCategory.RealTimeApp]
   },
   {
     id: 6,
@@ -59,8 +58,8 @@ export const projectData: Project[] = [
     techStack: ["ONNX", "Fiber", "PyTorch", "U-Net", "ResNet"],
     tool: "https://depth.patiphan.dev/",
     website: null,
-    status: "Active",
-    category: "AI/ML"
+    status: ProjectStatus.Completed,
+    categories: [ProjectCategory.FullStack, ProjectCategory.AIML]
   },
   {
     id: 1,
@@ -70,8 +69,8 @@ export const projectData: Project[] = [
     githubURL: "https://github.com/PatiphanAK/lend_sys",
     techStack: ["Django", "Vue 3", "REST", "API"],
     tool: null,
-    website: "https://lend.patiphan.dev/",
-    status: "Legacy",
-    category: "Full Stack"
+    website: null,
+    status: ProjectStatus.Legacy,
+    categories: [ProjectCategory.FullStack]
   },
 ];

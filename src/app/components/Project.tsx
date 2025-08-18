@@ -1,10 +1,10 @@
 "use client";   
 import React, { useState, useMemo } from 'react';
 import { Search, Grid, List, Cloud, Sun, Wind } from 'lucide-react';
-import { Project, FilterCategory, FilterStatus, ViewMode } from '@/app/types/project/project.type';
+import { Project, ProjectCategory, ProjectStatus, FilterCategory, FilterStatus, ViewMode } from '@/app/types/project/project.type';
 import { ProjectCard } from '@/app/components/Card/ProjectCard';
 import { projectData } from '../data/project/project';
-
+import { PROJECT_STATUS_CONFIG } from '../types/project/projectConfig';
 
 const Projects: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -21,14 +21,23 @@ const Projects: React.FC = () => {
                            project.techStack.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesStatus = statusFilter === 'All' || project.status === statusFilter;
-      const matchesCategory = categoryFilter === 'All' || project.category === categoryFilter;
+      
+      // Handle category filtering - project.category is now an array
+      const matchesCategory = categoryFilter === 'All' || project.categories.includes(categoryFilter as ProjectCategory);
       
       return matchesSearch && matchesStatus && matchesCategory;
     });
   }, [projects, searchTerm, statusFilter, categoryFilter]);
 
   const statusCounts = useMemo(() => {
-    const counts = { All: projects.length, Active: 0, Legacy: 0, 'In-Progress': 0 };
+    const counts: Record<FilterStatus, number> = {
+      All: projects.length,
+      [ProjectStatus.Active]: 0,
+      [ProjectStatus.Legacy]: 0,
+      [ProjectStatus.InProgress]: 0,
+      [ProjectStatus.Completed]: 0
+    };
+    
     projects.forEach(project => {
       counts[project.status]++;
     });
@@ -101,9 +110,11 @@ const Projects: React.FC = () => {
                 onChange={(e) => setStatusFilter(e.target.value as FilterStatus)}
               >
                 <option value="All">All ({statusCounts.All})</option>
-                <option value="Active">Active ({statusCounts.Active})</option>
-                <option value="Legacy">Legacy ({statusCounts.Legacy})</option>
-                <option value="In-Progress">In Progress ({statusCounts['In-Progress']})</option>
+                {Object.values(ProjectStatus).map(status => (
+                  <option key={status} value={status}>
+                    {PROJECT_STATUS_CONFIG[status].label} ({statusCounts[status]})
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -119,11 +130,11 @@ const Projects: React.FC = () => {
                 onChange={(e) => setCategoryFilter(e.target.value as FilterCategory)}
               >
                 <option value="All">All Categories</option>
-                <option value="Full Stack">Full Stack</option>
-                <option value="Real-time App">Real-time App</option>
-                <option value="Backend">Backend</option>
-                <option value="AI/ML">AI/ML</option>
-                <option value="Notebook">Notebook</option>
+                {Object.values(ProjectCategory).map(category => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -201,42 +212,19 @@ const Projects: React.FC = () => {
               <div className="font-semibold text-slate-700">Total Projects</div>
               <div className="text-xs text-slate-500">Floating in space</div>
             </div>
-            <div className="text-center group hover:scale-110 transition-transform duration-300">
-              <div className="bg-gradient-to-br from-emerald-400 to-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                <span className="text-2xl font-bold">{statusCounts.Active}</span>
+            
+            {Object.entries(PROJECT_STATUS_CONFIG).map(([status, config]) => (
+              <div key={status} className="text-center group hover:scale-110 transition-transform duration-300">
+                <div className={`bg-gradient-to-br ${config.color} text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg`}>
+                  <span className="text-2xl font-bold">{statusCounts[status as ProjectStatus]}</span>
+                </div>
+                <div className="font-semibold text-slate-700">{config.label}</div>
+                <div className="text-xs text-slate-500">{config.description}</div>
               </div>
-              <div className="font-semibold text-slate-700">Active</div>
-              <div className="text-xs text-slate-500">Clear skies</div>
-            </div>
-            <div className="text-center group hover:scale-110 transition-transform duration-300">
-              <div className="bg-gradient-to-br from-amber-400 to-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                <span className="text-2xl font-bold">{statusCounts['In-Progress']}</span>
-              </div>
-              <div className="font-semibold text-slate-700">In Progress</div>
-              <div className="text-xs text-slate-500">Partly cloudy</div>
-            </div>
-            <div className="text-center group hover:scale-110 transition-transform duration-300">
-              <div className="bg-gradient-to-br from-slate-400 to-gray-500 text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                <span className="text-2xl font-bold">{statusCounts.Legacy}</span>
-              </div>
-              <div className="font-semibold text-slate-700">Legacy</div>
-              <div className="text-xs text-slate-500">Settled layers</div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-      <img 
-  src="/assets/props/ridge.png" 
-  alt="Mountain landscape" 
-  className="object-contain object-bottom"
-  style={{ 
-    maxWidth: "300px",   // ✅ ย่อกว้างสุดไม่เกิน 300px
-    maxHeight: "150px",  // ✅ ย่อสูงสุดไม่เกิน 150px
-    filter: 'brightness(0.8) contrast(1.1)',
-    opacity: 0.9
-  }}
-/>
-
     </div>
   );
 };

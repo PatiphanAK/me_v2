@@ -1,3 +1,10 @@
+export enum ProjectStatus {
+  Active = 'Active',
+  Legacy = 'Legacy',
+  InProgress = 'In-Progress',
+  Completed = 'Completed',
+}
+
 export interface Project {
   id: number;
   title: string;
@@ -7,10 +14,20 @@ export interface Project {
   techStack: string[];
   tool: string | null;
   website: string | null;
-  status: 'Active' | 'Legacy' | 'In-Progress';
-  category: 'Full Stack' | 'Real-time App' | 'Backend' | 'AI/ML' | 'Notebook';
+  status: ProjectStatus;
+  categories: ProjectCategory[];
+}
+
+export enum ProjectCategory {
+  FullStack = 'Full Stack',
+  RealTimeApp = 'Real-time App',
+  Backend = 'Backend',
+  AIML = 'AI/ML',
+  Notebook = 'Notebook',
+  NLP = 'NLP',
+  CV = 'CV',
 }
 
 export type ViewMode = 'grid' | 'list';
-export type FilterStatus = 'All' | 'Active' | 'Legacy' | 'In-Progress';
-export type FilterCategory = 'All' | 'Full Stack' | 'Real-time App' | 'Backend' | 'AI/ML' | 'Notebook';
+export type FilterStatus = 'All' | ProjectStatus;
+export type FilterCategory = 'All' | ProjectCategory;
