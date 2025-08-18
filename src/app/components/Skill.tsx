@@ -13,6 +13,7 @@ import infrastructureRaw from "../data/skill/infra.json"
 import theoreticalSkillsRaw from "../data/skill/theory.json"
 import databaseRaw from "../data/skill/db.json"
 import { SpaceObjects } from './props/SpaceObject';
+import { TechLogo } from './Card/SkillLogo';
 
 const generateSkillsWithIds = (skills: Omit<PracticalSkillProps, 'id'>[], startId: number = 1): PracticalSkillProps[] => {
   return skills.map((skill, index) => ({
@@ -72,98 +73,6 @@ const SkillCategory: React.FC<TheorySkillProps> = ({ title, skills, icon, color,
     </div>
   </div>
 );
-
-const TechLogo: React.FC<PracticalSkillProps> = ({ name, logoUrl, color, description, tags }) => {
-  const [showTooltip, setShowTooltip] = React.useState(false);
-  const [isHovered, setIsHovered] = React.useState(false);
-  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-  
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setIsHovered(true);
-    setShowTooltip(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    timeoutRef.current = setTimeout(() => {
-      if (!isHovered) {
-        setShowTooltip(false);
-      }
-    }, 150);
-  };
-
-  const handleTooltipMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    setIsHovered(true);
-  };
-
-  const handleTooltipMouseLeave = () => {
-    setIsHovered(false);
-    timeoutRef.current = setTimeout(() => {
-      setShowTooltip(false);
-    }, 150);
-  };
-
-  React.useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
-  
-  return (
-    <div className="group relative inline-block">
-      <div 
-        className="w-20 h-20 flex items-center justify-center transform hover:scale-110 transition-transform duration-300 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-white/30 shadow-lg hover:shadow-xl cursor-pointer bg-white/90 hover:bg-white"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <img src={logoUrl} alt={name} className="w-12 h-12 object-contain filter drop-shadow-lg" />
-      </div>
-
-      <div 
-        className={`absolute -bottom-20 left-1/2 transform -translate-x-1/2 transition-all duration-300 ease-out z-30 
-          ${showTooltip ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-2 pointer-events-none'}`}
-        onMouseEnter={handleTooltipMouseEnter}
-        onMouseLeave={handleTooltipMouseLeave}
-      >
-        <div className="bg-gray-900/95 backdrop-blur-md text-white text-sm px-4 py-3 rounded-xl border border-white/30 shadow-2xl min-w-64 max-w-sm">
-          <div className="font-semibold text-center mb-2">{name}</div>
-          
-          {description && (
-            <div className="text-xs text-gray-300 text-center leading-relaxed mb-3">
-              {description}
-            </div>
-          )}
-          
-          {tags && tags.length > 0 && (
-            <div className="space-y-2">
-              <div className="text-xs text-blue-300 text-center font-medium">Experience with:</div>
-              <div className="flex flex-wrap justify-center gap-1">
-                {tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="inline-block bg-blue-600/80 text-white text-xs px-2 py-1 rounded-full border border-blue-400/50 backdrop-blur-sm hover:bg-blue-500/80 transition-colors duration-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-gray-900/95"></div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const PracticalSkillsSection: React.FC<{ title: string; skills: PracticalSkillProps[]; subtitle: string }> = ({ title, skills, subtitle }) => (
   <div className="mb-16">
