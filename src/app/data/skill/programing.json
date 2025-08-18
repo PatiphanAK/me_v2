@@ -3,63 +3,63 @@
     "name": "Go", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png", 
     "color": "#00ADD8", 
-    "description": "High-performance systems programming with excellent concurrency support", 
-    "tags": ["Goroutines", "Channels", "Fiber", "Gin", "GORM"] 
+    "description": "Preferred for building scalable and efficient medium-to-large applications.", 
+    "tags": ["Goroutines", "Channels", "Mutex", "Defer", "Interfaces & Methods"] 
   },
   { 
     "name": "Python", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png", 
     "color": "#3776AB", 
-    "description": "Versatile language for AI/ML, data science, and rapid prototyping", 
+    "description": "Utilized for rapid prototyping, data science, and AI-driven applications.", 
     "tags": ["FastAPI", "Django", "PyTorch", "NumPy", "Pandas", "OpenCV"] 
   },
   { 
     "name": "Rust", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1024px-Rust_programming_language_black_logo.svg.png", 
     "color": "#CE422B", 
-    "description": "Memory-safe systems programming with zero-cost abstractions", 
+    "description": "Chosen for high-performance, memory-safe systems and cost-effective infrastructures.", 
     "tags": ["Tokio", "Axum", "Serde", "Cargo", "WebAssembly"] 
   },
   { 
     "name": "JavaScript", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png", 
     "color": "#F7DF1E", 
-    "description": "Dynamic language for web development and modern applications", 
-    "tags": ["ES6+", "Node.js", "Express", "Async/Await", "DOM"] 
+    "description": "Core language for interactive web development and modern application ecosystems.", 
+    "tags": ["ES6+", "Node.js", "Express", "Async/Await", "DOM Manipulation"] 
   },
   { 
     "name": "TypeScript", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png", 
     "color": "#3178C6", 
-    "description": "Type-safe JavaScript for large-scale application development", 
+    "description": "Strongly-typed superset of JavaScript designed for large-scale applications.", 
     "tags": ["Interfaces", "Generics", "Decorators", "Type Guards"] 
   },
   { 
     "name": "C++", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png", 
     "color": "#00599C", 
-    "description": "High-performance programming for games, embedded systems, and more", 
+    "description": "Applied in traditional computer vision, edge computing, and CUDA-based acceleration.", 
     "tags": ["STL", "Templates", "Smart Pointers", "RAII"] 
   },
   { 
     "name": "C", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/C_Logo.png/1200px-C_Logo.png", 
     "color": "#A8B9CC", 
-    "description": "Low-level programming for operating systems and embedded devices", 
+    "description": "Hands-on experience primarily in low-level edge computing applications.", 
     "tags": ["Pointers", "Memory Management", "System Calls", "GCC"] 
   },
   { 
     "name": "Haskell", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Haskell-Logo.svg/1024px-Haskell-Logo.svg.png", 
     "color": "#5D4F85", 
-    "description": "Pure functional programming with strong type system", 
+    "description": "Studied to gain deep understanding of pure functional programming concepts.", 
     "tags": ["Monads", "Functors", "Type Classes", "Lazy Evaluation"] 
   },
   { 
     "name": "Shell", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/1024px-Bash_Logo_Colored.svg.png", 
     "color": "#4EAA25", 
-    "description": "System administration and automation scripting", 
-    "tags": ["Bash", "Zsh", "Scripts", "Pipes", "Cron Jobs"] 
+    "description": "Utilized for system administration, automation, and DevOps workflows.", 
+    "tags": ["Bash", "Zsh", "Scripting", "Pipelines", "Cron Jobs"] 
   }
 ]

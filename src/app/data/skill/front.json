@@ -3,14 +3,14 @@
     "name": "Vue 3", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png", 
     "color": "#4FC08D", 
-    "description": "Progressive framework for building user interfaces with composition API", 
-    "tags": ["Composition API", "Pinia", "Vue Router", "Vuetify", "Nuxt.js"] 
+    "description": "Experienced in developing progressive web applications, first applied during internship projects.", 
+    "tags": ["Composition API", "Pinia", "Vuetify", "Nuxt.js"] 
   },
   { 
     "name": "React", 
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png", 
     "color": "#61DAFB", 
-    "description": "Component-based library for building interactive user interfaces", 
+    "description": "Widely used for building scalable, component-based, and interactive user interfaces.", 
     "tags": ["Hooks", "JSX", "Redux", "Next.js", "Context API"] 
   }
 ]

@@ -18,7 +18,7 @@
     "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Neovim-mark.svg", 
     "color": "#57A143", 
     "description": "A hyperextensible Vim-based text editor built to be a modern foundation for text editing.", 
-    "tags": ["Vimscript", "Lua", "LSP", "Plugins", "Terminal"] 
+    "tags": ["Vimscript", "Plugins", "Terminal"] 
   },
   { 
     "name": "Git", 

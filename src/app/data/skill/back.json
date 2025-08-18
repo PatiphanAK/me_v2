@@ -18,7 +18,7 @@
     "logoUrl": "https://static.djangoproject.com/img/logos/django-logo-positive.svg", 
     "color": "#092E20", 
     "description": "High-level Python web framework for rapid development", 
-    "tags": ["ORM", "Admin Panel", "Templates", "Authentication", "Migrations"] 
+    "tags": ["ORM", "Django Rest", "Forms Validation", "Authentication", "Migrations"] 
   },
   { 
     "name": "FastAPI", 
