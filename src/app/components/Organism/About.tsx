@@ -2,7 +2,7 @@
 
 import { Star, Sparkles} from "lucide-react";
 import { AcademicBackgroundProps, ProfilePhotoProps } from "@/app/types/about/about.types";
-import TypingText from "@/app/components/typingtext";
+import TypingText from "@/app/components/Atomic/typingtext";
 import Image from "next/image";
 
 const ACADEMIC_DATA: AcademicBackgroundProps[] = [

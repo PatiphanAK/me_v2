@@ -1,8 +1,8 @@
 import { Suspense, ComponentType } from 'react';
-import About from '@/app/components/About';
-import Contacts from './components/Contact';
-import Skill from '@/app/components/Skill';
-import Projects from './components/Project';
+import About from '@/app/components/Organism/About';
+import Contacts from './components/Organism/Contact';
+import Skill from '@/app/components/Organism/Skill';
+import Projects from './components/Organism/Project';
 import ErrorBoundary from "@/app/components/Template/Error"
 import LoadingSpinner from '@/app/components/Template/Loading';
 

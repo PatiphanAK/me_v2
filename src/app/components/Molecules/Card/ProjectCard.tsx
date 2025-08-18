@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Project } from "@/app/types/project/project.type";
 import { isValidImageUrl } from "@/app/helpers/helper";
-import { ChipColor, ChipVariant, Chip } from "../Atomic/Chip";
+import { ChipColor, ChipVariant, Chip } from "../../Atomic/Chip";
 
 // Constants for Project Status Configuration
 const PROJECT_STATUS_CONFIG: Record<

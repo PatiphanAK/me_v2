@@ -3,17 +3,17 @@
 import React from 'react';
 import { useId, useState, useEffect } from "react";
 import { Brain,Layers, Cpu, BookOpen, ExternalLink } from 'lucide-react';
-import { TheorySkillProps, PracticalSkillProps } from '../types/skill/skill.interface';
-import programmingLanguagesRaw from "../data/skill/programing.json"
-import backendFrameworksRaw from "../data/skill/back.json"
-import frontendFrameworksRaw from "../data/skill/front.json"
-import aiMlToolsRaw from "../data/skill/data.json"
-import devToolsRaw from "../data/skill/devtool.json"
-import infrastructureRaw from "../data/skill/infra.json"
-import theoreticalSkillsRaw from "../data/skill/theory.json"
-import databaseRaw from "../data/skill/db.json"
-import { SpaceObjects } from './props/SpaceObject';
-import { TechLogo } from './Card/SkillLogo';
+import { TheorySkillProps, PracticalSkillProps } from '../../types/skill/skill.interface';
+import programmingLanguagesRaw from "../../data/skill/programing.json"
+import backendFrameworksRaw from "../../data/skill/back.json"
+import frontendFrameworksRaw from "../../data/skill/front.json"
+import aiMlToolsRaw from "../../data/skill/data.json"
+import devToolsRaw from "../../data/skill/devtool.json"
+import infrastructureRaw from "../../data/skill/infra.json"
+import theoreticalSkillsRaw from "../../data/skill/theory.json"
+import databaseRaw from "../../data/skill/db.json"
+import { SpaceObjects } from '../Molecules/props/SpaceObject';
+import { TechLogo } from '../Molecules/Card/SkillLogo';
 
 const generateSkillsWithIds = (skills: Omit<PracticalSkillProps, 'id'>[], startId: number = 1): PracticalSkillProps[] => {
   return skills.map((skill, index) => ({
