@@ -24,7 +24,7 @@ const ACADEMIC_DATA: AcademicBackgroundProps[] = [
   },
   {
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BCNsH4LsHt6Z4TSTzWw289dRUO3up6n6Dg&s",
-    title: "Diploma in Computer Software",
+    title: "School",
     institution: "42 École (42Bangkok | KMITL)",
     track: "System Programming",
     description: "Focus on system programming on Unix-based systems and edge device development. Intensive peer-to-peer learning environment.",
