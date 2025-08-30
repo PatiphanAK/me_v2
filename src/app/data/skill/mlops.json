@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Kubeflow",
+    "logoUrl": "https://avatars.githubusercontent.com/u/33164907?s=280&v=4",
+    "color": "#326CE5",
+    "description": "End-to-end ML platform on Kubernetes for scalable ML workflows and pipelines.",
+    "tags": ["mlops", "kubernetes", "pipeline", "workflow"]
+  },
+  {
+    "name": "DVC",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Data_Version_Control._Official_Logo_by_Iterative.ai.png",
+    "color": "#13ADC7",
+    "description": "Data version control for ML projects with Git-like workflow for data and models.",
+    "tags": [
+      "data-versioning",
+      "ml-pipeline",
+      "git-integration",
+      "reproducibility"
+    ]
+  },
+  {
+    "name": "MLflow",
+    "logoUrl": "https://mlflow.org/docs/2.2.2/_static/MLflow-logo-final-black.png",
+    "color": "#0194E2",
+    "description": "ML lifecycle management platform for experiment tracking and model deployment.",
+    "tags": [
+      "experiment-tracking",
+      "model-registry",
+      "deployment",
+      "ml-lifecycle"
+    ]
+  }
+]
