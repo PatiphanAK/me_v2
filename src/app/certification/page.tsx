@@ -443,7 +443,7 @@ const Page: React.FC = () => {
 
   const achievements: Achievement[] = [
     {
-      title: "Paticipation in Finalist",
+      title: "Participation as a Finalist",
       event: "Agentic AI For Healthcare <Hackathon>",
       date: "July 31, 2025",
       description: "2nd place in the Kaggle track",
