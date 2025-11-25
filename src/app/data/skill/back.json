@@ -1,30 +1,36 @@
 [
-  { 
-    "name": "Fiber (Go)", 
-    "logoUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*vZ-Xj3QZQ_rqOOTnzdPgiQ.png", 
-    "color": "#00ADD8", 
-    "description": "Express-inspired web framework built on top of Fasthttp", 
-    "tags": ["Middleware", "WebSocket", "Static Files", "Rate Limiting"] 
+  {
+    "name": "Fiber (Go)",
+    "logoUrl": "https://repository-images.githubusercontent.com/234231371/00fd8700-5430-11ea-820b-15fd85b2472c",
+    "color": "#00ADD8",
+    "description": "Express-inspired web framework built on top of Fasthttp",
+    "tags": ["Middleware", "WebSocket", "Static Files", "Rate Limiting"]
   },
-  { 
-    "name": "Axum", 
-    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tokio_logo.svg/1200px-Tokio_logo.svg.png", 
-    "color": "#000000", 
-    "description": "A web application framework that focuses on ergonomics and modularity, built on top of the Tokio runtime and Tower.", 
-    "tags": ["Rust", "Tokio", "Tower", "Async"] 
+  {
+    "name": "Axum",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Tokio_logo.svg/1200px-Tokio_logo.svg.png",
+    "color": "#000000",
+    "description": "A web application framework that focuses on ergonomics and modularity, built on top of the Tokio runtime and Tower.",
+    "tags": ["Rust", "Tokio", "Tower", "Async"]
   },
-  { 
-    "name": "Django", 
-    "logoUrl": "https://static.djangoproject.com/img/logos/django-logo-positive.svg", 
-    "color": "#092E20", 
-    "description": "High-level Python web framework for rapid development", 
-    "tags": ["ORM", "Django Rest", "Forms Validation", "Authentication", "Migrations"] 
+  {
+    "name": "Django",
+    "logoUrl": "https://static.djangoproject.com/img/logos/django-logo-positive.svg",
+    "color": "#092E20",
+    "description": "High-level Python web framework for rapid development",
+    "tags": [
+      "ORM",
+      "Django Rest",
+      "Forms Validation",
+      "Authentication",
+      "Migrations"
+    ]
   },
-  { 
-    "name": "FastAPI", 
-    "logoUrl": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png", 
-    "color": "#009688", 
-    "description": "Modern, fast web framework for building APIs with Python", 
-    "tags": ["Pydantic", "OAuth2", "OpenAPI", "Async", "Type Hints"] 
+  {
+    "name": "FastAPI",
+    "logoUrl": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+    "color": "#009688",
+    "description": "Modern, fast web framework for building APIs with Python",
+    "tags": ["Pydantic", "OAuth2", "OpenAPI", "Async", "Type Hints"]
   }
 ]

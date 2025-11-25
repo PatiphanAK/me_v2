@@ -1,7 +1,10 @@
-'use client';
+"use client";
 
-import { Star, Sparkles} from "lucide-react";
-import { AcademicBackgroundProps, ProfilePhotoProps } from "@/app/types/about/about.types";
+import { Star, Sparkles } from "lucide-react";
+import {
+  AcademicBackgroundProps,
+  ProfilePhotoProps,
+} from "@/app/types/about/about.types";
 import TypingText from "@/app/components/Atomic/typingtext";
 import Image from "next/image";
 
@@ -11,23 +14,17 @@ const ACADEMIC_DATA: AcademicBackgroundProps[] = [
     title: "BSc Information Technology",
     institution: "King Mongkut's Institute of Technology Ladkrabang (KMITL)",
     track: "Software Development Track",
-    description: "Focus on requirement analysis, system design, scaling, functional and non-functional aspects of software development.",
+    description:
+      "Focus on requirement analysis, system design, scaling, functional and non-functional aspects of software development.",
     borderColorClass: "border-purple-500/20",
-  },
-  {
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt2Oym_1FfF1KGvRNpVn0nV8lAUpGAwzMuGg&s",
-    title: "BSc Physics",
-    institution: "Ramkhamhaeng University (RU)",
-    track: "Wave Theory Track",
-    description: "Focus on wave-like signal processing including image processing, speech processing, noise reduction, and fundamentals of Lie groups.",
-    borderColorClass: "border-blue-500/20",
   },
   {
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BCNsH4LsHt6Z4TSTzWw289dRUO3up6n6Dg&s",
     title: "School",
     institution: "42 École (42Bangkok | KMITL)",
     track: "System Programming",
-    description: "Focus on system programming on Unix-based systems and edge device development. Intensive peer-to-peer learning environment.",
+    description:
+      "Focus on system programming on Unix-based systems and edge device development. Intensive peer-to-peer learning environment.",
     borderColorClass: "border-green-500/20",
   },
 ];
@@ -48,27 +45,43 @@ const STARS = [
 const ABOUT_CONTENT = [
   `Hi! I'm Patiphan Akkahadsri, a lifelong learner passionate about Image Processing, Computer Vision, and Backend Development. I love exploring new technologies, frameworks, and tools—from abstract concepts to real-world applications.
   I thrive on hands-on projects, building end-to-end solutions for image analysis, backend systems, and data pipelines. Comfortable with Linux and open-source tools, I enjoy optimizing workflows and continuously learning new techniques to stay at the forefront of technology.
-  For me, learning never stops. I see challenges as opportunities to innovate, grow, and create meaningful solutions that make a difference.`
+  For me, learning never stops. I see challenges as opportunities to innovate, grow, and create meaningful solutions that make a difference.`,
 ];
 
-
 const AcademicBackground: React.FC<AcademicBackgroundProps> = ({
-  icon, title, institution, track, description, borderColorClass
+  icon,
+  title,
+  institution,
+  track,
+  description,
+  borderColorClass,
 }) => (
-  <div className={`bg-gray-800/50 backdrop-blur-sm border ${borderColorClass} rounded-xl p-4 sm:p-6 transform hover:scale-105 transition-all duration-300`}>
+  <div
+    className={`bg-gray-800/50 backdrop-blur-sm border ${borderColorClass} rounded-xl p-4 sm:p-6 transform hover:scale-105 transition-all duration-300`}
+  >
     <div className="flex items-start space-x-3 sm:space-x-4">
       <div className="flex-shrink-0">
         <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 overflow-hidden">
           {typeof icon === "string" ? (
-            <Image src={icon} alt={title} width={48} height={48} className="w-full h-full object-cover" />
+            <Image
+              src={icon}
+              alt={title}
+              width={48}
+              height={48}
+              className="w-full h-full object-cover"
+            />
           ) : (
             icon
           )}
         </div>
       </div>
       <div className="flex-1 min-w-0">
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 break-words">{title}</h3>
-        <p className="text-purple-400 font-medium mb-1 sm:mb-2 text-sm sm:text-base break-words">{institution}</p>
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 break-words">
+          {title}
+        </h3>
+        <p className="text-purple-400 font-medium mb-1 sm:mb-2 text-sm sm:text-base break-words">
+          {institution}
+        </p>
         <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
           <strong className="block sm:inline">{track}</strong>
           <span className="hidden sm:inline"> - </span>
@@ -102,13 +115,21 @@ const ProfilePhoto: React.FC<ProfilePhotoProps> = ({ imageUrl, alt }) => (
     <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 p-1 shadow-2xl">
       <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
         {imageUrl ? (
-          <Image src={imageUrl} alt={alt ?? "Profile Photo"} width={160} height={160} className="object-cover w-full h-full rounded-full" />
+          <Image
+            src={imageUrl}
+            alt={alt ?? "Profile Photo"}
+            width={160}
+            height={160}
+            className="object-cover w-full h-full rounded-full"
+          />
         ) : (
-          <div className="text-2xl sm:text-3xl lg:text-4xl text-purple-400">👨‍🚀</div>
+          <div className="text-2xl sm:text-3xl lg:text-4xl text-purple-400">
+            👨‍🚀
+          </div>
         )}
       </div>
       <div className="hidden lg:block">
-        <TypingText/>
+        <TypingText />
       </div>
     </div>
     <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 text-yellow-400 animate-bounce">
@@ -120,7 +141,9 @@ const ProfilePhoto: React.FC<ProfilePhotoProps> = ({ imageUrl, alt }) => (
   </div>
 );
 
-const AcademicSection: React.FC<{ className?: string }> = ({ className = "" }) => (
+const AcademicSection: React.FC<{ className?: string }> = ({
+  className = "",
+}) => (
   <div className={`space-y-4 sm:space-y-6 ${className}`}>
     <h2 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-white mb-4 sm:mb-6 text-center sm:text-left lg:text-left">
       Academic Journey
@@ -135,12 +158,14 @@ const AcademicSection: React.FC<{ className?: string }> = ({ className = "" }) =
 
 const PageTitle: React.FC<{ isMobile?: boolean }> = ({ isMobile = false }) => (
   <>
-  <h1 className={`font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4 sm:mb-6 ${
-    isMobile ? 'text-4xl sm:text-5xl md:text-6xl' : 'text-6xl xl:text-7xl'
-  }`}>
-    About Me
-  </h1>
-  <p className="text-white text-sm sm:text-base">{ABOUT_CONTENT}</p>
+    <h1
+      className={`font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent mb-4 sm:mb-6 ${
+        isMobile ? "text-4xl sm:text-5xl md:text-6xl" : "text-6xl xl:text-7xl"
+      }`}
+    >
+      About Me
+    </h1>
+    <p className="text-white text-sm sm:text-base">{ABOUT_CONTENT}</p>
   </>
 );
 
@@ -148,14 +173,14 @@ const PageTitle: React.FC<{ isMobile?: boolean }> = ({ isMobile = false }) => (
 const About: React.FC = () => (
   <section className="min-h-screen bg-black relative overflow-hidden">
     <StarField />
-    
+
     <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 pb-16 sm:pb-20 lg:pb-24">
       {/* Mobile & Tablet Layout */}
       <div className="lg:hidden min-h-screen py-8 space-y-8">
         <div className="flex justify-center pt-4">
           <ProfilePhoto imageUrl="/assets/me/me.png" alt="Profile Photo" />
         </div>
-        
+
         <div className="space-y-6 sm:space-y-8 pb-12">
           <div className="text-center sm:text-left">
             <PageTitle isMobile />
@@ -169,19 +194,19 @@ const About: React.FC = () => (
         <div className="w-1/5 flex items-center justify-center pr-8">
           <ProfilePhoto imageUrl="/assets/me/me.png" alt="Profile Photo" />
         </div>
-        
+
         <div className="w-4/5 flex items-center">
           <div className="space-y-8 max-w-4xl pb-16">
             <div>
               <PageTitle />
-              <Image 
-                src="/assets/props/star1.png" 
-                alt="Star" 
-                width={112} 
-                height={112} 
+              <Image
+                src="/assets/props/star1.png"
+                alt="Star"
+                width={112}
+                height={112}
                 className="absolute top-4 right-4 opacity-80 z-0 pointer-events-auto transition-transform duration-300 ease-in-out hover:scale-125 hover:animate-shake"
               />
-              
+
               <AcademicSection className="mt-12 mb-12" />
             </div>
           </div>

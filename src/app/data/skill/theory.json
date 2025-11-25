@@ -19,37 +19,37 @@
   {
     "title": "Mathematics",
     "skills": [
-      { 
-        "name": "Linear Algebra - Vector spaces and matrix operations", 
-        "link": "https://en.wikipedia.org/wiki/Linear_algebra" 
+      {
+        "name": "Linear Algebra - Vector spaces and matrix operations",
+        "link": "https://en.wikipedia.org/wiki/Linear_algebra"
       },
-      { 
-        "name": "Calculus - Differential and integral calculus applications", 
-        "link": "https://en.wikipedia.org/wiki/Calculus" 
+      {
+        "name": "Calculus - Differential and integral calculus applications",
+        "link": "https://en.wikipedia.org/wiki/Calculus"
       },
-      { 
-        "name": "Differential Equations - Modeling complex systems", 
-        "link": "https://en.wikipedia.org/wiki/Differential_equation" 
+      {
+        "name": "Differential Equations - Modeling complex systems",
+        "link": "https://en.wikipedia.org/wiki/Differential_equation"
       },
-      { 
-        "name": "Probability & Statistics - Data analysis and inference", 
-        "link": "https://en.wikipedia.org/wiki/Probability" 
+      {
+        "name": "Probability & Statistics - Data analysis and inference",
+        "link": "https://en.wikipedia.org/wiki/Probability"
       },
-      { 
-        "name": "Differential Geometry - Advanced geometric analysis", 
-        "link": "https://en.wikipedia.org/wiki/Differential_geometry" 
+      {
+        "name": "Differential Geometry - Advanced geometric analysis",
+        "link": "https://en.wikipedia.org/wiki/Differential_geometry"
       },
-      { 
-        "name": "Real Analysis - Rigorous mathematical foundations", 
-        "link": "https://en.wikipedia.org/wiki/Real_analysis" 
+      {
+        "name": "Real Analysis - Rigorous mathematical foundations",
+        "link": "https://en.wikipedia.org/wiki/Real_analysis"
       },
-      { 
-        "name": "Discrete Mathematics - Logic and combinatorics", 
-        "link": "https://en.wikipedia.org/wiki/Discrete_mathematics" 
+      {
+        "name": "Discrete Mathematics - Logic and combinatorics",
+        "link": "https://en.wikipedia.org/wiki/Discrete_mathematics"
       },
-      { 
-        "name": "Computational Theory - Complexity analysis and algorithm design", 
-        "link": "https://en.wikipedia.org/wiki/Theory_of_computation" 
+      {
+        "name": "Computational Theory - Complexity analysis and algorithm design",
+        "link": "https://en.wikipedia.org/wiki/Theory_of_computation"
       }
     ],
     "icon": "Math",
@@ -94,36 +94,36 @@
   {
     "title": "System Design & Architecture",
     "skills": [
-      { 
-        "name": "API & Communication - RESTful, gRPC, GraphQL, WebSocket, Server-Sent Events", 
-        "link": "https://en.wikipedia.org/wiki/API" 
+      {
+        "name": "API & Communication - RESTful, gRPC, GraphQL, WebSocket, Server-Sent Events",
+        "link": "https://en.wikipedia.org/wiki/API"
       },
-      { 
-        "name": "Message Brokers - Kafka, IBM MQ, HiveMQ for distributed systems", 
-        "link": "https://en.wikipedia.org/wiki/Message_broker" 
+      {
+        "name": "Message Brokers - Kafka, IBM MQ, NATS.IO for distributed systems",
+        "link": "https://en.wikipedia.org/wiki/Message_broker"
       },
-      { 
-        "name": "Authentication - OAuth, JWT, Cookie-based authentication systems", 
-        "link": "https://en.wikipedia.org/wiki/Authentication" 
+      {
+        "name": "Authentication - OAuth, JWT, Cookie-based authentication systems",
+        "link": "https://en.wikipedia.org/wiki/Authentication"
       },
-      { 
-        "name": "Testing - Integration, Unit, and Functional testing methodologies", 
-        "link": "https://en.wikipedia.org/wiki/Software_testing" 
+      {
+        "name": "Testing - Integration, Unit, and Functional testing methodologies",
+        "link": "https://en.wikipedia.org/wiki/Software_testing"
       },
-      { 
-        "name": "Database Design - Indexing, CAP theorem, Sharding, Replication, ACID", 
-        "link": "https://en.wikipedia.org/wiki/Database_design" 
+      {
+        "name": "Database Design - Indexing, CAP theorem, Sharding, Replication, ACID",
+        "link": "https://en.wikipedia.org/wiki/Database_design"
       },
-      { 
-        "name": "Design Patterns - Monolithic, SOA, Microservices, Serverless architectures", 
-        "link": "https://en.wikipedia.org/wiki/Software_design_pattern" 
+      {
+        "name": "Design Patterns - Monolithic, SOA, Microservices, Serverless architectures",
+        "link": "https://en.wikipedia.org/wiki/Software_design_pattern"
       },
-      { 
-        "name": "Agentic Workflows - Sequential processing and automation" 
+      {
+        "name": "Agentic Workflows - Sequential processing and automation"
       },
-      { 
-        "name": "CI/CD Principles - Continuous integration and deployment strategies", 
-        "link": "https://en.wikipedia.org/wiki/CI/CD" 
+      {
+        "name": "CI/CD Principles - Continuous integration and deployment strategies",
+        "link": "https://en.wikipedia.org/wiki/CI/CD"
       }
     ],
     "icon": "Layers",
