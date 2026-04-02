@@ -156,9 +156,7 @@ export default function Skill() {
             ./skills
           </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            Skills & Capabilities
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">./skills</h1>
 
           <p className="text-sm text-[var(--text-secondary)] max-w-2xl">
             Focused on building scalable systems, data pipelines, and

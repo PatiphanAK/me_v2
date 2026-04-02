@@ -174,7 +174,7 @@ export const projectData: Project[] = [
     },
     links: {
       github: "https://github.com/PatiphanAK/image-depth-estimation",
-      demo: "https://depth.patiphan.dev/",
+      demo: null,
     },
     metrics: {
       latency: "Sub-200ms inference on standard CPUs",
