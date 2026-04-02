@@ -60,7 +60,7 @@ export const projectData: Project[] = [
     metrics: {
       foundations: "Calculus, Linear Algebra, Probability & Discrete Math",
       advanced_analysis:
-        "Stochastic Processes, Information Theory & Optimization",
+        "Real Analysis, Stochastic Processes, Information Theory & Optimization",
       approach: "Pure Python Implementations & Symbolic Computation",
       practical_use: "ML Optimization, Signal Processing & System Reliability",
     },
