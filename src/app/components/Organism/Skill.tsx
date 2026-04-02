@@ -13,7 +13,6 @@ import frontendFrameworksRaw from "../../data/skill/front.json";
 import aiMlToolsRaw from "../../data/skill/data.json";
 import devToolsRaw from "../../data/skill/devtool.json";
 import infrastructureRaw from "../../data/skill/infra.json";
-import theoreticalSkillsRaw from "../../data/skill/theory.json";
 import databaseRaw from "../../data/skill/db.json";
 import mlworkflowRaw from "../../data/skill/mlops.json";
 import { SpaceObjects } from "../Molecules/props/SpaceObject";
@@ -286,13 +285,6 @@ export default function Skill() {
     setIsMounted(true);
   }, []);
 
-  const theoreticalSkills = theoreticalSkillsRaw.map((skill) => ({
-    ...skill,
-    icon: iconMap[skill.icon as keyof typeof iconMap] || (
-      <Brain className="text-white" size={24} />
-    ),
-  }));
-
   // Show loading state during hydration to prevent mismatch
   if (!isMounted) {
     return (
@@ -349,19 +341,6 @@ export default function Skill() {
               Upper Atmosphere • Stratosphere • 50,000+ feet
             </p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto mt-4 rounded-full"></div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {theoreticalSkills.map((skill, index) => (
-              <SkillCategory
-                key={index}
-                title={skill.title}
-                skills={skill.skills}
-                icon={skill.icon}
-                color={skill.color}
-                bgGradient={skill.bgGradient}
-                link={skill.link}
-              />
-            ))}
           </div>
         </div>
 

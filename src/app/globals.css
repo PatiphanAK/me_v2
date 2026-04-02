@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+:root {
+    /* ── base ── */
+    --river-bg: #05070d;
+    --river-border: rgba(80, 120, 255, 0.18);
+
+    --nav-bg: rgba(8, 10, 18, 0.92);
+    --nav-border: rgba(80, 120, 255, 0.25);
+    --nav-shadow: rgba(0, 0, 0, 0.6);
+
+    /* ── text ── */
+    --text-main: #dbeafe; /* blue-100 */
+    --text-dim: rgba(120, 160, 255, 0.5);
+
+    /* ── accent ── */
+    --accent-primary: #3b82f6; /* blue-500 */
+    --accent-hover: #60a5fa; /* blue-400 */
+
+    /* ── secondary accent (math vibe) ── */
+    --accent-secondary: #a78bfa; /* violet */
+
+    /* ── glow ── */
+    --glow-primary: rgba(59, 130, 246, 0.25);
+    --glow-strong: rgba(96, 165, 250, 0.4);
+
+    /* ── grid ── */
+    --grid-color: rgba(80, 120, 255, 0.05);
+}
