@@ -6,7 +6,7 @@ import {
 
 export const projectData: Project[] = [
   {
-    id: 1,
+    id: 3,
     title: "Coral Detection MLOps",
 
     description:
@@ -38,12 +38,12 @@ export const projectData: Project[] = [
       accuracy: "92%",
     },
 
-    status: ProjectStatus.Active,
+    status: ProjectStatus.Legacy,
     type: "ml-system",
     categories: [ProjectCategory.FullStack],
   },
   {
-    id: 2,
+    id: 6,
     title: "Functional Distributed Racing Data Pipeline",
 
     description:
@@ -81,78 +81,128 @@ export const projectData: Project[] = [
     type: "data",
     categories: [ProjectCategory.Backend],
   },
-];
-// export const projectData: Project[] = [
-//   {
-//     id: 1,
-//     title: "Object detection basic",
-//     description:
-//       "Full-Stack MLOps for Green Coral Detection. Fine-tuned YOLOv12n analyzed with Grad-CAM, tracked by MLflow, and monitored in real-time using Prometheus/Grafana visualization via a basic Web UI.",
-//     image: "/assets/project/basic_object_detection.png",
-//     githubURL: "https://github.com/PatiphanAK/object_detection_basic",
-//     techStack: [
-//       "FastAPI",
-//       "PyTorch",
-//       "PyTorch-GRADCAM",
-//       "OpenCV",
-//       "MLflow",
-//       "VanillaJS",
-//     ],
-//     tool: null,
-//     website: null,
-//     status: ProjectStatus.Active,
-//     categories: [ProjectCategory.FullStack],
-//   },
-//   {
-//     id: 5,
-//     title: "Math for IT",
-//     description:
-//       "A practical, code-driven mathematics notebook covering core topics from Calculus Linear Algebra Probability. It provides hands-on examples and visualizations using Python libraries like NumPy, SymPy, and Matplotlib.",
-//     image: "/assets/project/math_for_it.png",
-//     githubURL: "https://github.com/PatiphanAK/math-for-it",
-//     techStack: ["Python", "NumPy", "SymPy", "Matplotlib"],
-//     tool: null,
-//     website: null,
-//     status: ProjectStatus.InProgress,
-//     categories: [ProjectCategory.Notebook],
-//   },
-//   {
-//     id: 4,
-//     title: "CMKL Hackathon",
-//     description:
-//       "A Thai medical document analysis system using Typhoon OCR for enhanced text extraction and advanced language models for question-answering. Developed with a FastAPI backend and PyTorch for model inference.",
-//     image: "/assets/project/cmkl_agentic_healthcare.png",
-//     githubURL: "https://github.com/PatiphanAK/cmkl-med-hackathon",
-//     techStack: ["FastAPI", "PyTorch", "OCR", "LLM", "Python"],
-//     tool: null,
-//     website: null,
-//     status: ProjectStatus.InProgress,
-//     categories: [ProjectCategory.AIML],
-//   },
-//   {
-//     id: 2,
-//     title: "Quiz App",
-//     description:
-//       "An interactive quiz application. Developed with Fiber backend, Gorilla WebSocket for real-time interactions, and Nuxt 3 frontend. Features Google OAuth2.0 authentication with secure HTTP cookie implementation.",
-//     image: "/assets/project/quiz.png",
-//     githubURL: "https://github.com/PatiphanAK/leauge-of-quiz",
-//     techStack: ["Go", "Fiber", "Websocket", "Nuxt 3", "OAuth"],
-//     tool: null,
-//     website: null,
-//     status: ProjectStatus.Completed,
-//     categories: [ProjectCategory.FullStack, ProjectCategory.RealTimeApp],
-//   },
-//   {
-//     id: 6,
-//     title: "Image Depth Estimation",
-//     description:
-//       "An interactive tool for estimating depth from a single 2D image. It leverages a pre-trained PyTorch model (U-Net with a ResNet backbone), converted to ONNX for efficient, cross-platform inference. The backend is built with the Go Fiber framework to serve the model via a REST API.",
-//     image: "/assets/project/image_depth.png",
-//     githubURL: "https://github.com/PatiphanAK/image-depth-estimation",
-//     techStack: ["ONNX", "Fiber", "PyTorch", "U-Net", "ResNet"],
-//     tool: "https://depth.patiphan.dev/",
-//     website: null,
-//     status: ProjectStatus.Legacy,
-//     categories: [ProjectCategory.FullStack, ProjectCategory.AIML],
-//   },
-// ];
+  {
+    id: 1,
+    title: "On-Device Image Depth Estimation",
+    description:
+      "A high-performance tool for estimating depth from 2D images. Utilizes a U-Net architecture with a ResNet backbone, optimized for cross-platform inference via the ONNX runtime.",
+    highlights: [
+      "Optimized PyTorch model using ONNX for 3x faster inference",
+      "Built high-concurrency REST API using Go Fiber",
+      "Implemented seamless U-Net + ResNet feature extraction",
+      "Cross-platform support for efficient edge-device deployment",
+    ],
+    image: "/assets/project/image_depth.png",
+    stack: {
+      frontend: ["VanillaJS"],
+      backend: ["Go", "Fiber"],
+      ml: ["PyTorch", "ONNX", "U-Net", "ResNet"],
+      pipeline: ["Docker"],
+      infra: ["Self-hosted"],
+    },
+    links: {
+      github: "https://github.com/PatiphanAK/image-depth-estimation",
+      demo: "https://depth.patiphan.dev/",
+    },
+    metrics: {
+      latency: "Sub-200ms inference on standard CPUs",
+      optimization: "Model size reduced via ONNX quantization",
+    },
+    status: ProjectStatus.Legacy,
+    type: "ml-system",
+    categories: [ProjectCategory.FullStack, ProjectCategory.AIML],
+  },
+  {
+    id: 5,
+    title: "Math for IT: Practical Notebooks",
+    description:
+      "A code-driven mathematical guide covering core concepts from Calculus, Linear Algebra, and Probability, bridging the gap between theory and IT applications.",
+    highlights: [
+      "Interactive visualizations using Matplotlib & Seaborn",
+      "Symbolic computation implementations with SymPy",
+      "Large-scale numerical operations using NumPy",
+      "Documented core concepts for Computer Science students",
+    ],
+    image: "/assets/project/math_for_it.png",
+    stack: {
+      frontend: ["Jupyter Notebook"],
+      backend: ["Python"],
+      ml: ["NumPy", "SymPy", "Matplotlib", "Seaborn"],
+      pipeline: [],
+      infra: [],
+    },
+    links: {
+      github: "https://github.com/PatiphanAK/math-for-it",
+      demo: null,
+    },
+    metrics: {
+      coverage: "Calculus, Linear Algebra, Statistics",
+      approach: "Pure code-driven explanations",
+    },
+    status: ProjectStatus.InProgress,
+    type: "notebook",
+    categories: [ProjectCategory.Notebook],
+  },
+  {
+    id: 4,
+    title: "Agentic Medical Doc Analysis (CMKL)",
+    description:
+      "Advanced Thai medical document analysis system developed during CMKL Hackathon. Combines OCR with LLMs for intelligent question-answering over clinical records.",
+    highlights: [
+      "Integrated Typhoon OCR for high-accuracy Thai text extraction",
+      "Designed RAG pipeline for medical document QA",
+      "Asynchronous backend processing via FastAPI",
+      "Implemented Agentic workflows for complex query handling",
+    ],
+    image: "/assets/project/cmkl_agentic_healthcare.png",
+    stack: {
+      frontend: [],
+      backend: ["FastAPI", "Python"],
+      ml: ["PyTorch", "Typhoon OCR", "LLM", "LangChain"],
+      pipeline: ["RAG"],
+      infra: [],
+    },
+    links: {
+      github: "https://github.com/PatiphanAK/cmkl-med-hackathon",
+      demo: null,
+    },
+    metrics: {
+      capability: "OCR + Semantic Search + QA",
+      domain: "Thai Medical Healthcare",
+    },
+    status: ProjectStatus.Legacy,
+    type: "ml-system",
+    categories: [ProjectCategory.AIML],
+  },
+  {
+    id: 2,
+    title: "League of Quiz: Real-time Interactive App",
+    description:
+      "A robust real-time quiz platform featuring secure authentication and instant state synchronization for interactive learning.",
+    highlights: [
+      "Real-time communication using Gorilla WebSockets",
+      "Secure Google OAuth 2.0 with HTTP-only cookie session",
+      "Modern SSR/CSR frontend using Nuxt 3",
+      "High-performance Go Fiber backend architecture",
+    ],
+    image: "/assets/project/quiz.png",
+    stack: {
+      frontend: ["Nuxt 3", "Vue 3", "TailwindCSS"],
+      backend: ["Go", "Fiber", "Websocket", "Redis"],
+      ml: [],
+      pipeline: ["GitHub Actions"],
+      infra: ["Docker", "Google Cloud OAuth"],
+    },
+    links: {
+      github: "https://github.com/PatiphanAK/leauge-of-quiz",
+      demo: null,
+    },
+    metrics: {
+      sync: "Low-latency WebSocket updates",
+      security: "Secure OAuth2 Flow with SSR support",
+    },
+    status: ProjectStatus.Legacy,
+    type: "real-time",
+    categories: [ProjectCategory.FullStack, ProjectCategory.RealTimeApp],
+  },
+].sort((a, b) => b.id - a.id);

@@ -38,7 +38,8 @@ export interface Project {
     | "fullstack"
     | "realtime"
     | "notebook"
-    | "data";
+    | "data"
+    | undefined;
   metrics?: Record<string, string>;
 }
 
