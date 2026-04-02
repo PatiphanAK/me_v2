@@ -74,7 +74,7 @@ export default function Navbar() {
                 Patiphan<span className="text-[var(--accent-hover)]">AK</span>
               </span>
               <span className="font-mono text-[9px] text-[var(--text-dim)] tracking-[2px] uppercase mt-0.5">
-                Programmers
+                Programmer
               </span>
             </div>
           </button>

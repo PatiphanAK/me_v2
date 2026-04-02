@@ -19,14 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${inter.className} bg-gradient-to-br from-green-50 to-yellow-50 antialiased`}
-      >
+      <body className={`${inter.className} antialiased`}>
         <Navbar />
-        <div className="relative min-h-screen">{children}</div>
-        <footer className="bg-green-900 text-green-100 py-8 text-center">
-          <div className="flex justify-center items-center space-x-2"></div>
-        </footer>
+        {children}
       </body>
     </html>
   );

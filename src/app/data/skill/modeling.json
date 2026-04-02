@@ -1,0 +1,7 @@
+[
+  { "name": "Pytorch" },
+  { "name": "OpenCV" },
+  { "name": "Scikit-learn" },
+  { "name": "GradCAM" },
+  { "name": "Sentence Transformers" }
+]

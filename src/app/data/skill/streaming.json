@@ -1,0 +1,7 @@
+[
+  { "name": "Kafka" },
+  { "name": "RabbitMQ" },
+  { "name": "AWS SQS" },
+  { "name": "MQTT" },
+  { "name": "NATS.io" }
+]

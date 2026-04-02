@@ -1,0 +1,6 @@
+[
+  { "name": "Ubuntu" },
+  { "name": "Debian" },
+  { "name": "Alpine" },
+  { "name": "FreeBSD" }
+]

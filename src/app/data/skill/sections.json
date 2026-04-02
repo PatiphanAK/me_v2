@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Programming",
+    "icon": "cpu",
+    "source": "programming",
+    "description": "Languages and core programming foundations for building systems"
+  },
+  {
+    "title": "Backend Systems",
+    "icon": "database",
+    "source": "backend",
+    "description": "API design, concurrency, and scalable backend services"
+  },
+  {
+    "title": "Databases & Storage",
+    "icon": "database",
+    "source": "database",
+    "description": "Relational, NoSQL, and Vector storage for applications"
+  },
+  {
+    "title": "Data Processing",
+    "icon": "brain",
+    "source": "data_processing",
+    "description": "ETL workflows, batch processing, and data transformation"
+  },
+  {
+    "title": "Streaming Systems",
+    "icon": "cpu",
+    "source": "streaming",
+    "description": "Real-time pipelines, messaging systems, and event-driven architecture"
+  },
+  {
+    "title": "Distributed Computing",
+    "icon": "database",
+    "source": "distributed",
+    "description": "Parallel and distributed computation, scalable processing, and high-performance systems"
+  },
+  {
+    "title": "ML Modeling",
+    "icon": "brain",
+    "source": "modeling",
+    "description": "Model development, training, and evaluation"
+  },
+  {
+    "title": "ML Systems",
+    "icon": "brain",
+    "source": "mlops",
+    "description": "Model lifecycle, experiment tracking, and deployment systems"
+  },
+  {
+    "title": "LLM Systems",
+    "icon": "brain",
+    "source": "llm",
+    "description": "LLM applications, RAG pipelines, and agent systems"
+  },
+  {
+    "title": "Edge & Networking",
+    "icon": "cloud",
+    "source": "edge",
+    "description": "CDN, DNS, and traffic routing at the edge layer"
+  },
+  {
+    "title": "Web & Proxy",
+    "icon": "cpu",
+    "source": "proxy",
+    "description": "Reverse proxy, routing, and web server layer"
+  },
+  {
+    "title": "Containers",
+    "icon": "database",
+    "source": "containers",
+    "description": "Containerization and orchestration systems"
+  },
+  {
+    "title": "Cloud & Deployment",
+    "icon": "cloud",
+    "source": "cloud",
+    "description": "Cloud platforms, CI/CD pipelines, and deployment workflows"
+  },
+  {
+    "title": "System",
+    "icon": "wrench",
+    "source": "system",
+    "description": "Linux, shell, and low-level system fundamentals"
+  },
+  {
+    "title": "Tooling",
+    "icon": "wrench",
+    "source": "devtool",
+    "description": "Collaboration, API testing, and developer workflows"
+  }
+]

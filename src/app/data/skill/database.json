@@ -1,0 +1,7 @@
+[
+  { "name": "PostgreSQL" },
+  { "name": "MySQL" },
+  { "name": "Redis" },
+  { "name": "ScyllaDB" },
+  { "name": "Milvus" }
+]

@@ -1,191 +1,241 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Project } from "@/app/types/project/project.type";
 import { isValidImageUrl } from "@/app/helpers/helper";
-import { ChipColor, ChipVariant, Chip } from "../../Atomic/Chip";
 
-// Constants for Project Status Configuration
-const PROJECT_STATUS_CONFIG: Record<
-  Project["status"],
-  { color: ChipColor; variant: ChipVariant; bgColor?: string }
-> = {
-  Active: { color: "success", variant: "soft" },
-  "In-Progress": { color: "warning", variant: "soft" },
-  Completed: { color: "info", variant: "soft" },
-  Legacy: { color: "secondary", variant: "soft" },
-} as const;
+const flattenStack = (stack: Project["stack"]) => {
+  if (!stack) return [];
+  return Object.values(stack).flat().filter(Boolean);
+};
 
-// Constants for Project Categories Configuration
-const PROJECT_CATEGORIES_CONFIG: Record<
-  string,
-  { color: string; variant: ChipVariant }
-> = {
-  "Full Stack": {
-    color: "#3B82F6",
-    variant: "soft",
-  },
-  "Real-time App": {
-    color: "#F59E0B",
-    variant: "soft",
-  },
-  Backend: {
-    color: "#6B7280",
-    variant: "soft",
-  },
-  "AI/ML": {
-    color: "#10B981",
-    variant: "soft",
-  },
-  Notebook: {
-    color: "#06B6D4",
-    variant: "soft",
-  },
-  NLP: {
-    color: "#EF4444",
-    variant: "soft",
-  },
-  CV: {
-    color: "#8B5CF6",
-    variant: "soft",
-  },
-  default: {
-    color: "#06B6D4",
-    variant: "soft",
-  },
-} as const;
+const stripMarkdown = (text: string) => text.replace(/\*\*(.*?)\*\*/g, "$1");
 
-const TECH_STACK_CONFIG = {
-  color: "primary" as ChipColor,
-  variant: "soft" as ChipVariant,
-  size: "xs" as const,
-} as const;
+interface ProjectCardProps {
+  project: Project;
+  variant?: "grid" | "list";
+}
 
-const TECH_OVERFLOW_CONFIG = {
-  color: "secondary" as ChipColor,
-  variant: "soft" as ChipVariant,
-  size: "xs" as const,
-} as const;
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  project,
+  variant = "grid",
+}) => {
+  const techList = flattenStack(project.stack);
+  const techPreview = variant === "grid" ? techList.slice(0, 4) : techList;
 
-export const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const statusConfig =
-    PROJECT_STATUS_CONFIG[project.status] || PROJECT_STATUS_CONFIG["Legacy"];
-  const categoryKey =
-    Array.isArray(project.categories) && project.categories.length > 0
-      ? project.categories[0]
-      : typeof project.categories === "string"
-      ? project.categories
-      : "default";
-  const categoryConfig =
-    PROJECT_CATEGORIES_CONFIG[categoryKey] ||
-    PROJECT_CATEGORIES_CONFIG["default"];
-
-  return (
-    <div className="group bg-white/70 backdrop-blur-sm rounded-2xl shadow-lg border border-white/40 overflow-hidden hover:shadow-2xl hover:bg-white/80 transition-all duration-500 hover:-translate-y-2">
-      <div className="relative h-48 overflow-hidden">
-        {isValidImageUrl(project.image) ? (
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        ) : (
-          <>
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-blue-200"></div>
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-500/20"></div>
-          </>
-        )}
-
-        {/* Overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10"></div>
-
-        {/* Status Chip */}
-        <div className="absolute top-4 right-4">
-          <Chip
-            color={statusConfig.color}
-            variant={statusConfig.variant}
-            size="xs"
-            className="backdrop-blur-sm bg-white/10"
-          >
-            {project.status}
-          </Chip>
+  if (variant === "list") {
+    return (
+      <div
+        className="
+          group flex min-h-[160px]
+          border border-[var(--border-muted)]
+          bg-[var(--bg-elevated)]
+          rounded-lg overflow-hidden
+          transition
+          hover:border-[var(--border)]
+          hover:shadow-[0_0_12px_var(--glow-primary)]
+        "
+      >
+        {/* IMAGE */}
+        <div className="relative w-48 flex-shrink-0 border-r border-[var(--border-muted)] overflow-hidden">
+          {isValidImageUrl(project.image) ? (
+            <Image
+              src={project.image!}
+              alt={project.title}
+              fill
+              className="object-cover opacity-80 transition group-hover:scale-105"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-[10px] text-[var(--text-muted)] font-mono">
+              no preview
+            </div>
+          )}
+          <div className="absolute top-1.5 left-1.5">
+            <span className="text-[10px] font-mono px-2 py-0.5 border border-[var(--border-muted)] bg-[var(--bg-base)]">
+              {project.status}
+            </span>
+          </div>
         </div>
 
-        {/* Category Chip */}
-        <div className="absolute bottom-4 left-4">
-          <div className="flex flex-wrap gap-2">
-            {project.categories?.map((category, index) => {
-              const categoryConfig =
-                PROJECT_CATEGORIES_CONFIG[category] ||
-                PROJECT_CATEGORIES_CONFIG["default"];
-              return (
-                <Chip
-                  key={index}
-                  color={categoryConfig.color}
-                  variant={categoryConfig.variant}
-                  size="xs"
-                  className="backdrop-blur-sm bg-white/10"
+        {/* CONTENT */}
+        <div className="flex flex-1 gap-4 min-w-0 p-3">
+          {/* LEFT */}
+          <div className="flex flex-col gap-2 flex-1 min-w-0">
+            <div>
+              <h3 className="font-mono text-xs text-[var(--text-primary)] truncate">
+                {project.title}
+              </h3>
+              <p className="text-[11px] text-[var(--text-muted)] line-clamp-2 mt-0.5 leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+
+            <ul className="text-[10px] text-[var(--text-muted)] font-mono space-y-0.5">
+              {project.highlights?.slice(0, 3).map((h, i) => (
+                <li key={i}>- {stripMarkdown(h)}</li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-1">
+              {techPreview.map((tech, i) => (
+                <span
+                  key={i}
+                  className="text-[10px] px-2 py-[2px] border border-[var(--border-muted)] rounded font-mono text-[var(--text-muted)]"
                 >
-                  {category}
-                </Chip>
-              );
-            })}
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex gap-3 text-[11px] font-mono mt-auto pt-1">
+              {project.links?.github && (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
+                >
+                  [code]
+                </a>
+              )}
+              {project.links?.demo && (
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
+                >
+                  [live]
+                </a>
+              )}
+            </div>
           </div>
+
+          {/* RIGHT: metrics */}
+          {project.metrics && (
+            <div className="w-48 flex-shrink-0 flex flex-col gap-2 border-l border-[var(--border-muted)] pl-3">
+              {Object.entries(project.metrics).map(([k, v]) => (
+                <div
+                  key={k}
+                  className="font-mono text-[10px] flex flex-col gap-0.5"
+                >
+                  <span className="text-slate-500 uppercase tracking-wider">
+                    {k.replace(/_/g, " ")}
+                  </span>
+                  <span className="text-[var(--accent)] line-clamp-3 leading-relaxed">
+                    {stripMarkdown(v)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // --- GRID VIEW ---
+  return (
+    <div
+      className="
+        group flex flex-col h-full
+        border border-[var(--border-muted)]
+        bg-[var(--bg-elevated)]
+        rounded-lg overflow-hidden transition
+        hover:border-[var(--border)]
+        hover:-translate-y-1
+        hover:shadow-[0_0_20px_var(--glow-primary)]
+      "
+    >
+      <div className="relative aspect-[16/9] border-b border-[var(--border-muted)] overflow-hidden">
+        {isValidImageUrl(project.image) ? (
+          <Image
+            src={project.image!}
+            alt={project.title}
+            fill
+            className="object-cover opacity-80 transition group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-[10px] text-[var(--text-muted)] font-mono">
+            no preview
+          </div>
+        )}
+        <div className="absolute top-1.5 right-1.5">
+          <span className="text-[10px] font-mono px-2 py-0.5 border border-[var(--border-muted)] bg-[var(--bg-base)]">
+            {project.status}
+          </span>
         </div>
       </div>
 
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-cyan-700 transition-colors">
-          {project.title}
-        </h3>
-        <p className="text-slate-600 mb-4 line-clamp-3">
-          {project.description}
-        </p>
+      <div className="p-3 flex flex-col gap-2.5 flex-1">
+        <div>
+          <h3 className="font-mono text-xs text-[var(--text-primary)] line-clamp-1">
+            {project.title}
+          </h3>
+          <p className="text-[11px] text-[var(--text-muted)] line-clamp-2 mt-1">
+            {project.description}
+          </p>
+        </div>
 
-        {/* Tech Stack Chips */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.techStack.slice(0, 4).map((tech, index) => (
-            <Chip
-              key={index}
-              color={TECH_STACK_CONFIG.color}
-              variant={TECH_STACK_CONFIG.variant}
-              size={TECH_STACK_CONFIG.size}
+        <ul className="text-[10px] text-[var(--text-muted)] font-mono space-y-0.5">
+          {project.highlights?.slice(0, 2).map((h, i) => (
+            <li key={i}>- {stripMarkdown(h)}</li>
+          ))}
+        </ul>
+
+        <div className="flex flex-wrap gap-1">
+          {techPreview.slice(0, 4).map((tech, i) => (
+            <span
+              key={i}
+              className="text-[10px] px-2 py-[2px] border border-[var(--border-muted)] rounded font-mono text-[var(--text-muted)]"
             >
               {tech}
-            </Chip>
+            </span>
           ))}
-          {project.techStack.length > 4 && (
-            <Chip
-              color={TECH_OVERFLOW_CONFIG.color}
-              variant={TECH_OVERFLOW_CONFIG.variant}
-              size={TECH_OVERFLOW_CONFIG.size}
-            >
-              +{project.techStack.length - 4}
-            </Chip>
+          {techList.length > 4 && (
+            <span className="text-[10px] px-2 py-[2px] border border-[var(--border-muted)] rounded font-mono text-[var(--text-muted)]">
+              +{techList.length - 4}
+            </span>
           )}
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex gap-3">
-          {project.website && (
+        {/* grid: only show short metrics (≤20 chars) */}
+        {project.metrics && (
+          <div className="flex flex-wrap gap-x-3 gap-y-1">
+            {Object.entries(project.metrics)
+              .filter(([, v]) => stripMarkdown(v).length <= 20)
+              .map(([k, v]) => (
+                <div key={k} className="font-mono text-[10px] flex gap-1">
+                  <span className="text-slate-500 uppercase tracking-wider">
+                    {k.replace(/_/g, " ")}:
+                  </span>
+                  <span className="text-[var(--accent)]">
+                    {stripMarkdown(v)}
+                  </span>
+                </div>
+              ))}
+          </div>
+        )}
+
+        <div className="mt-auto flex gap-3 pt-1.5 text-[11px] font-mono">
+          {project.links?.github && (
             <a
-              href={project.website}
+              href={project.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-lg text-center text-sm font-medium hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
+              className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
             >
-              View Live
+              [code]
             </a>
           )}
-          {project.githubURL && (
+          {project.links?.demo && (
             <a
-              href={project.githubURL}
+              href={project.links.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 border-2 border-cyan-400 text-cyan-600 px-4 py-2 rounded-lg text-center text-sm font-medium hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              className="text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
             >
-              GitHub
+              [live]
             </a>
           )}
         </div>

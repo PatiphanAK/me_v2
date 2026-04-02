@@ -1,0 +1,9 @@
+[
+  { "name": "Docker" },
+  { "name": "containerd" },
+  { "name": "Kubernetes" },
+  { "name": "K3s" },
+  { "name": "Kind" },
+  { "name": "minikube" },
+  { "name": "ArgoWorkflow" }
+]
