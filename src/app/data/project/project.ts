@@ -37,30 +37,31 @@ export const projectData: Project[] = [
   },
   {
     id: 5,
-    title: "Math for IT: Practical Notebooks",
+    title: "Math for IT: Computational Foundations",
     description:
-      "A code-driven mathematical guide covering core concepts from Calculus, Linear Algebra, and Probability, bridging the gap between theory and IT applications.",
+      "A comprehensive, code-first guide bridging high-level mathematical theory with IT applications. Covering Phase 1 (Foundations) to Phase 2 (Advanced Analysis) for ML, Graphics, and System Reliability.",
     highlights: [
-      "Interactive visualizations using Matplotlib & Seaborn",
-      "Symbolic computation implementations with SymPy",
-      "Large-scale numerical operations using NumPy",
-      "Documented core concepts for Computer Science students",
+      "Phase 1: Calculus, Linear Algebra, Probability & Discrete Math for ML/CS",
+      "Phase 2: Real Analysis, Stochastic Processes, Information Theory, and Numerical Methods",
+      "Applied Examples: Backpropagation, SVD, Markov Chains, and PCA",
+      "Interactive Visualizations: Plotting complex functions with NumPy & Matplotlib",
     ],
     image: "/assets/project/math_for_it.png",
     stack: {
       frontend: ["Jupyter Notebook"],
       backend: ["Python"],
-      ml: ["NumPy", "SymPy", "Matplotlib", "Seaborn"],
+      ml: ["NumPy", "SymPy", "Matplotlib", "Seaborn", "SciPy"],
+      pipeline: ["Numerical Analysis"],
     },
     links: {
       github: "https://github.com/PatiphanAK/math-for-it",
       demo: null,
     },
     metrics: {
-      core_foundations: "Calculus, Linear Algebra, Statistics & Discrete Math",
+      foundations: "Calculus, Linear Algebra, Probability & Discrete Math",
       advanced_analysis:
         "Stochastic Processes, Information Theory & Optimization",
-      approach: "Code-First Visualizations & Algorithm Implementations",
+      approach: "Pure Python Implementations & Symbolic Computation",
       practical_use: "ML Optimization, Signal Processing & System Reliability",
     },
     status: ProjectStatus.InProgress,
