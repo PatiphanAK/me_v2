@@ -57,8 +57,11 @@ export const projectData: Project[] = [
       demo: null,
     },
     metrics: {
-      coverage: "Calculus, Linear Algebra, Statistics",
-      approach: "Pure code-driven explanations",
+      core_foundations: "Calculus, Linear Algebra, Statistics & Discrete Math",
+      advanced_analysis:
+        "Stochastic Processes, Information Theory & Optimization",
+      approach: "Code-First Visualizations & Algorithm Implementations",
+      practical_use: "ML Optimization, Signal Processing & System Reliability",
     },
     status: ProjectStatus.InProgress,
     type: "notebook",
