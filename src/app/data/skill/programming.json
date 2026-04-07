@@ -4,5 +4,8 @@
   { "name": "Scala" },
   { "name": "Java" },
   { "name": "SQL" },
-  { "name": "Bash" }
+  { "name": "Shell Script" },
+  { "name": "Rust (Still learning)" },
+  { "name": "C/C++ (a little bit of CUDA API)" },
+  { "name": "Haskell (Still learning)" }
 ]
