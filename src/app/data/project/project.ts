@@ -6,6 +6,38 @@ import {
 
 export const projectData: Project[] = [
   {
+    id: 7,
+    title: "Data Repository System",
+    description:
+      "A comprehensive dataset management platform featuring graph-based data discovery, highly optimized large-file ingestion, and centralized identity management.",
+    highlights: [
+      "Implemented background job processing with Hangfire for asynchronous dataset extraction and metadata generation.",
+      "Designed a graph-based recommendation module to improve dataset discovery via relationship modeling.",
+      "Optimized file ingestion by implementing Presigned Upload URLs and Multipart uploads for direct-to-storage transfers.",
+      "Integrated Keycloak for centralized identity management, enabling seamless SSO with School LDAP and Google Auth.",
+    ],
+    image: "/assets/project/data_repo.png",
+    stack: {
+      backend: ["ASP.NET", "Hangfire", "Keycloak", "JWT"],
+      frontend: ["Next.js"],
+      pipeline: ["Jenkins"],
+      infra: ["RustFS", "PostgreSQL", "Redis", "Docker"],
+    },
+    links: {
+      github: "https://github.com/PatiphanAK/data_repo_mvp_back",
+      demo: null,
+    },
+    metrics: {
+      performance:
+        "Optimized large dataset ingestion via Presigned & Multipart uploads.",
+      security: "Centralized seamless SSO with external Identity Providers.",
+      discovery: "Enhanced data relations tracking with Graph-based modeling.",
+    },
+    status: ProjectStatus.Active,
+    type: "app",
+    categories: [ProjectCategory.FullStack],
+  },
+  {
     id: 6,
     title: "Functional Distributed Racing Data Pipeline",
     description:
