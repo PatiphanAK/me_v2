@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 const Contacts: React.FC = () => {
   const socialLinks = [
-    { icon: Mail, href: "mailto:pakkahadsri@gmail.com", label: "Email" },
+    { icon: Mail, href: "mailto:patiphan3new1@gmail.com", label: "Email" },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/patiphan-akkahadsri-959535271/",
