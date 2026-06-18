@@ -16,8 +16,8 @@ const Contacts: React.FC = () => {
     <footer
       className="
         relative w-full
-        border-t border-[var(--border-muted)]
-        bg-[var(--bg-elevated)]
+        border-t border-(--border-muted)
+        bg-(--bg-elevated)
         overflow-hidden
       "
     >
@@ -62,7 +62,7 @@ const Contacts: React.FC = () => {
               transition
             "
           >
-            pakkahadsri@gmail.com
+            patiphan3new1@gmail.com
           </a>
 
           <div className="flex items-center gap-4">
