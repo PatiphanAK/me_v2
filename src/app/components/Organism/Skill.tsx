@@ -7,20 +7,17 @@ import sections from "../../data/skill/sections.json";
 
 import programming from "@/app/data/skill/programming.json";
 import modeling from "@/app/data/skill/modeling.json";
-import proxy from "@/app/data/skill/proxy.json";
-import edge from "@/app/data/skill/edge.json";
-import system from "@/app/data/skill/system.json";
+import networking from "@/app/data/skill/networking.json";
 import cloud from "@/app/data/skill/cloud.json";
 import mlops from "@/app/data/skill/mlops.json";
 import data_processing from "@/app/data/skill/data_processing.json";
-import distributed from "@/app/data/skill/distributed.json";
-import containers from "@/app/data/skill/containers.json";
+import distributed_messaging from "@/app/data/skill/distributed_messaging.json";
 import backend from "@/app/data/skill/back.json";
 import database from "@/app/data/skill/database.json";
-import infra from "@/app/data/skill/infra.json";
-import devtool from "@/app/data/skill/devtool.json";
-import streaming from "@/app/data/skill/streaming.json";
-import llm from "@/app/data/skill/llm.json";
+import devops from "@/app/data/skill/devops.json";
+import api_tooling from "@/app/data/skill/api_tooling.json";
+import observability from "@/app/data/skill/observability.json";
+import ai_ml from "@/app/data/skill/ai_ml.json";
 // ─── ICON MAP ─────────────────────────────────────────
 
 const ICON_MAP = {
@@ -37,19 +34,16 @@ const DATA_MAP = {
   programming,
   backend,
   database,
-  infra,
-  devtool,
+  devops,
+  api_tooling,
   data_processing,
-  streaming,
-  distributed,
+  observability,
+  distributed_messaging,
   mlops,
-  containers,
-  proxy,
+  networking,
   modeling,
-  edge,
-  system,
   cloud,
-  llm,
+  ai_ml,
 } as const;
 
 type DataKey = keyof typeof DATA_MAP;

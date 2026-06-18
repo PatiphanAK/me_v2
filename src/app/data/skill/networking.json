@@ -1,6 +1,6 @@
 [
   { "name": "Nginx" },
   { "name": "Cloudflare" },
-  { "name": "Traefik" },
-  { "name": "Kong" }
+  { "name": "Ngrok" },
+  { "name": "Traefik" }
 ]

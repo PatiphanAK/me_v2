@@ -1,8 +1,1 @@
-[
-  { "name": "Jenkins" },
-  { "name": "GitHub Actions" },
-  { "name": "ArgoCD" },
-  { "name": "AWS" },
-  { "name": "GCP" },
-  { "name": "VM / Compute" }
-]
+[{ "name": "AWS" }, { "name": "GCP" }, { "name": "Azure" }]

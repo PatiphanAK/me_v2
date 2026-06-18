@@ -2,6 +2,12 @@
   { "name": "PostgreSQL" },
   { "name": "MySQL" },
   { "name": "Redis" },
+  { "name": "Cassandra" },
   { "name": "ScyllaDB" },
+  { "name": "MongoDB" },
+  { "name": "DuckDB" },
+  { "name": "TiDB (Beginner)" },
+  { "name": "InfluxDB (Beginner)" },
+  { "name": "VictoriaMetrics (Beginner)" },
   { "name": "Milvus" }
 ]

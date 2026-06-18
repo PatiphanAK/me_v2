@@ -1,6 +1,10 @@
 [
-  { "name": "mlflows" },
+  { "name": "MLflow" },
   { "name": "DVC" },
   { "name": "Kubeflow" },
-  { "name": "ONNX" }
+  { "name": "ONNX" },
+  { "name": "vLLM" },
+  { "name": "Evidently AI" },
+  { "name": "Argo Workflows" },
+  { "name": "Hydra" }
 ]

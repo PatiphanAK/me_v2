@@ -5,7 +5,9 @@
   { "name": "Java" },
   { "name": "SQL" },
   { "name": "Shell Script" },
-  { "name": "Rust (Still learning)" },
-  { "name": "C/C++ (a little bit of CUDA API)" },
-  { "name": "Haskell (Still learning)" }
+  { "name": "C/C++" },
+  { "name": "Groovy" },
+  { "name": "TypeScript" },
+  { "name": "Rust (Beginner)" },
+  { "name": "C# (Beginner)" }
 ]

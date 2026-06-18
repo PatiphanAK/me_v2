@@ -2,6 +2,7 @@
   { "name": "Pytorch" },
   { "name": "OpenCV" },
   { "name": "Scikit-learn" },
-  { "name": "GradCAM" },
+  { "name": "GradCAM (XAI)" },
+  { "name": "SHAP (XAI)" },
   { "name": "Sentence Transformers" }
 ]

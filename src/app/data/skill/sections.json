@@ -1,92 +1,68 @@
 [
   {
     "title": "Programming",
-    "icon": "cpu",
+    "icon": "code",
     "source": "programming",
-    "description": "Languages and core programming foundations for building systems"
+    "description": "Core programming languages and scripting for building scalable systems"
   },
   {
-    "title": "Backend Systems",
-    "icon": "database",
+    "title": "Backend Frameworks",
+    "icon": "server",
     "source": "backend",
-    "description": "API design, concurrency, and scalable backend services"
+    "description": "API design, web services, and robust backend development"
   },
   {
-    "title": "Databases & Storage",
-    "icon": "database",
-    "source": "database",
-    "description": "Relational, NoSQL, and Vector storage for applications"
+    "title": "Infrastructure & DevOps",
+    "icon": "layers",
+    "source": "devops",
+    "description": "Containerization, orchestration, IaC, and CI/CD pipelines"
   },
   {
-    "title": "Data Processing",
+    "title": "Observability & Monitoring",
+    "icon": "activity",
+    "source": "observability",
+    "description": "System telemetry, logging, tracing, and performance metrics"
+  },
+  {
+    "title": "Distributed Systems & Messaging",
+    "icon": "network",
+    "source": "distributed_messaging",
+    "description": "Event-driven architecture, message brokers, and large-scale data processing"
+  },
+  {
+    "title": "AI/ML & Scientific Computing",
     "icon": "brain",
-    "source": "data_processing",
-    "description": "ETL workflows, batch processing, and data transformation"
+    "source": "ai_ml",
+    "description": "Machine learning models, scientific computing, and generative AI pipelines"
   },
   {
-    "title": "Streaming Systems",
+    "title": "MLOps",
     "icon": "cpu",
-    "source": "streaming",
-    "description": "Real-time pipelines, messaging systems, and event-driven architecture"
-  },
-  {
-    "title": "Distributed Computing",
-    "icon": "database",
-    "source": "distributed",
-    "description": "Parallel and distributed computation, scalable processing, and high-performance systems"
-  },
-  {
-    "title": "ML Modeling",
-    "icon": "brain",
-    "source": "modeling",
-    "description": "Model development, training, and evaluation"
-  },
-  {
-    "title": "ML Systems",
-    "icon": "brain",
     "source": "mlops",
-    "description": "Model lifecycle, experiment tracking, and deployment systems"
+    "description": "Machine learning lifecycle, experiment tracking, and model deployment"
   },
   {
-    "title": "LLM Systems",
-    "icon": "brain",
-    "source": "llm",
-    "description": "LLM applications, RAG pipelines, and agent systems"
-  },
-  {
-    "title": "Edge & Networking",
-    "icon": "cloud",
-    "source": "edge",
-    "description": "CDN, DNS, and traffic routing at the edge layer"
-  },
-  {
-    "title": "Web & Proxy",
-    "icon": "cpu",
-    "source": "proxy",
-    "description": "Reverse proxy, routing, and web server layer"
-  },
-  {
-    "title": "Containers",
-    "icon": "database",
-    "source": "containers",
-    "description": "Containerization and orchestration systems"
-  },
-  {
-    "title": "Cloud & Deployment",
+    "title": "Cloud Computing",
     "icon": "cloud",
     "source": "cloud",
-    "description": "Cloud platforms, CI/CD pipelines, and deployment workflows"
+    "description": "Cloud infrastructure, serverless computing, and managed cloud services"
   },
   {
-    "title": "System",
-    "icon": "wrench",
-    "source": "system",
-    "description": "Linux, shell, and low-level system fundamentals"
+    "title": "Networking",
+    "icon": "globe",
+    "source": "networking",
+    "description": "Reverse proxy, DNS, edge routing, and traffic management"
   },
   {
-    "title": "Tooling",
-    "icon": "wrench",
-    "source": "devtool",
-    "description": "Collaboration, API testing, and developer workflows"
+    "title": "Databases",
+    "icon": "database",
+    "source": "database",
+    "description": "Relational, NoSQL, and time-series database management"
+  },
+  {
+    "title": "API Design & Tooling",
+    "icon": "book-open",
+    "source": "api_tooling",
+    "description": "API documentation, OpenAPI specifications, and endpoint testing"
   }
 ]

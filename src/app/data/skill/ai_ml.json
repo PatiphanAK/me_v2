@@ -1,0 +1,16 @@
+[
+  { "name": "PyTorch" },
+  { "name": "OpenCV" },
+  { "name": "Huggingface" },
+  { "name": "Scikit-learn" },
+  { "name": "SciPy" },
+  { "name": "Matplotlib" },
+  { "name": "NumPy" },
+  { "name": "Pandas" },
+  { "name": "Polars" },
+  { "name": "LangGraph" },
+  { "name": "LangChain" },
+  { "name": "Docling" },
+  { "name": "SHAP (XAI)" },
+  { "name": "GradCAM (XAI)" }
+]

@@ -1,0 +1,15 @@
+[
+  { "name": "Git" },
+  { "name": "GitLab" },
+  { "name": "BitBucket" },
+  { "name": "containerd" },
+  { "name": "Docker" },
+  { "name": "Kubernetes (K8s)" },
+  { "name": "K3s" },
+  { "name": "Jenkins" },
+  { "name": "Ansible" },
+  { "name": "Helm" },
+  { "name": "ArgoCD" },
+  { "name": "Terraform (IaC)" },
+  { "name": "systemd" }
+]

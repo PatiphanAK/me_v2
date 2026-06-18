@@ -1,0 +1,5 @@
+[
+  { "name": "LGTM Stack (Loki, Grafana, Tempo, Mimir)" },
+  { "name": "OpenTelemetry" },
+  { "name": "Spark Operator" }
+]

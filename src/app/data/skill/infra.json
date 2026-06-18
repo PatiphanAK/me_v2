@@ -1,9 +1,0 @@
-[
-  { "name": "Docker" },
-  { "name": "Kubernetes" },
-  { "name": "Linux" },
-  { "name": "Nginx" },
-  { "name": "CI/CD" },
-  { "name": "GitHub Actions" },
-  { "name": "Cloud (AWS/GCP)" }
-]

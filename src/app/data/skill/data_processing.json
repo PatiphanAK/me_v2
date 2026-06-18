@@ -2,5 +2,6 @@
   { "name": "Pandas" },
   { "name": "NumPy" },
   { "name": "PySpark" },
+  { "name": "Apache Spark" },
   { "name": "Polars" }
 ]
