@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { withBasePath } from "@/app/helpers/helper";
 import Terminal from "@/app/components/Molecules/About/Terminal";
 import StatsGrid from "@/app/components/Molecules/About/StatsGrid";
 
@@ -86,7 +87,7 @@ export default function About() {
                 className="overflow-hidden "
               >
                 <Image
-                  src={PROFILE.avatar}
+                  src={withBasePath(PROFILE.avatar)}
                   alt={PROFILE.name}
                   width={AVATAR_SIZE}
                   height={AVATAR_SIZE}

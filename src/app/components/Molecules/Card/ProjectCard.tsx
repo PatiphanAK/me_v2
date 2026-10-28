@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import { Project } from "@/app/types/project/project.type";
-import { isValidImageUrl } from "@/app/helpers/helper";
+import { isValidImageUrl, withBasePath } from "@/app/helpers/helper";
 import Link from "next/link"; // อย่าลืม Import
 
 const ProjectLink = ({
@@ -63,7 +63,7 @@ const ProjectCardList = ({
     <div className="relative w-48 flex-shrink-0 border-r border-[var(--border-muted)] bg-black/20">
       {isValidImageUrl(project.image) ? (
         <Image
-          src={project.image!}
+          src={withBasePath(project.image!)}
           alt={project.title}
           fill
           className="object-cover opacity-80 transition group-hover:scale-105"
@@ -139,7 +139,7 @@ const ProjectCardGrid = ({
     <div className="relative aspect-[16/9] border-b border-[var(--border-muted)] overflow-hidden">
       {isValidImageUrl(project.image) ? (
         <Image
-          src={project.image!}
+          src={withBasePath(project.image!)}
           alt={project.title}
           fill
           className="object-cover opacity-80 transition group-hover:scale-105"

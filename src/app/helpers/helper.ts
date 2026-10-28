@@ -8,3 +8,7 @@ export const isValidImageUrl = (url: string | null | undefined): url is string =
     return false;
   }
 };
+
+// next/image does not prefix basePath for local paths, so do it manually
+export const withBasePath = (path: string): string =>
+  path.startsWith("/") ? `${process.env.NEXT_PUBLIC_BASE_PATH || ""}${path}` : path;

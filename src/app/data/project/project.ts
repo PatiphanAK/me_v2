@@ -25,7 +25,7 @@ export const projectData: Project[] = [
     },
     links: {
       github: "https://github.com/PatiphanAK/data_repo_mvp_back",
-      demo: null,
+      demo: "https://deeptech.it.kmitl.ac.th/",
     },
     metrics: {
       performance:
