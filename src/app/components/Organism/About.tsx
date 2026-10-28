@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
+import { Award, ExternalLink } from "lucide-react";
 import { withBasePath } from "@/app/helpers/helper";
 import Terminal from "@/app/components/Molecules/About/Terminal";
 import StatsGrid from "@/app/components/Molecules/About/StatsGrid";
+import VizPanel from "@/app/components/Molecules/About/VizPanel";
 
 // ─── CONFIG ─────────────────────────────────────────────
 
@@ -12,9 +14,8 @@ const PROFILE = {
   status: "Open to opportunities",
   avatar: "/assets/me/me.jpg",
   headline: {
-    line1: "Designing data pipelines",
-    line2: "and distributed systems",
-    accent: "that scale.",
+    text: "Intelligent systems, from algorithms to",
+    accent: "infrastructure.",
   },
   bio: "Information Technology student with internship experience in backend systems and data workflows. Interested in open-source, cloud-native architecture, and building scalable, reliable systems — from low-level Unix environments to distributed infrastructure.",
 };
@@ -27,7 +28,7 @@ const STATS = [
 
 const TERMINAL_LINES: { text: string; type: "cmd" | "out" }[] = [
   { text: "patiphan@portfolio:~$ whoami", type: "cmd" },
-  { text: "developer", type: "out" },
+  { text: "programmer", type: "out" },
   { text: "patiphan@portfolio:~$ cat focus.txt", type: "cmd" },
   { text: "pipelines · distributed systems · cloud-native", type: "out" },
   { text: "patiphan@portfolio:~$ █", type: "cmd" },
@@ -36,8 +37,32 @@ const TERMINAL_LINES: { text: string; type: "cmd" | "out" }[] = [
 const CURRENTLY = [
   { label: "building", value: "data pipelines on Kubernetes" },
   { label: "learning", value: "distributed systems & data mesh" },
-  { label: "interested", value: "LLMOps · streaming · edge inference" },
 ];
+
+const INTERESTS = [
+  {
+    label: "academic",
+    items: [
+      "Convex Optimization & Operations Research",
+      "Fuzzy Systems & Evolutionary Computation",
+      "Computer Vision & Digital Signal Processing",
+      "Machine Learning & Statistical Learning",
+    ],
+  },
+  {
+    label: "practical",
+    items: [
+      "AI/ML Systems Engineering",
+      "Internal Developer Platforms (IDPs)",
+      "Cloud-Native Infrastructure & Kubernetes",
+      "Distributed Systems & Resource Scheduling",
+      "DevOps & MLOps Engineering",
+    ],
+  },
+];
+
+const CREDLY_URL =
+  "https://www.credly.com/users/patiphan-akkahadsri.41c7b44d";
 
 const CTA = [
   {
@@ -55,7 +80,7 @@ const AVATAR_SIZE = 88;
 export default function About() {
   return (
     <section
-      className="relative min-h-screen pt-24 lg:pt-32"
+      className="relative min-h-screen pt-8 md:pt-10 lg:pt-12 pb-16"
       style={{ background: "var(--bg-base)", color: "var(--text-primary)" }}
     >
       {/* grid background */}
@@ -69,7 +94,7 @@ export default function About() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-12">
-        <p className="font-mono text-xs text-[var(--text-muted)] tracking-[0.2em] mb-10">
+        <p className="font-mono text-xs text-[var(--text-muted)] tracking-[0.2em] mb-6 lg:mb-8">
           ./about
         </p>
 
@@ -115,16 +140,17 @@ export default function About() {
             {/* terminal */}
             <Terminal lines={TERMINAL_LINES} speed={500} />
 
+            {/* visualizations */}
+            <VizPanel />
+
             {/* stats */}
             <StatsGrid stats={STATS} />
           </div>
           {/* ── RIGHT ── */}
           <div className="lg:col-span-8 flex flex-col gap-8">
             {/* headline */}
-            <h1 className="font-mono text-4xl lg:text-5xl font-bold leading-tight max-w-3xl">
-              {PROFILE.headline.line1}
-              <br />
-              {PROFILE.headline.line2}{" "}
+            <h1 className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold leading-[1.15] max-w-3xl text-balance lg:-mt-1">
+              {PROFILE.headline.text}{" "}
               <span className="text-[var(--accent)]">
                 {PROFILE.headline.accent}
               </span>
@@ -155,6 +181,57 @@ export default function About() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* interests */}
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-4">
+                interests
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {INTERESTS.map((group) => (
+                  <div key={group.label}>
+                    <p className="font-mono text-sm text-[var(--text-secondary)] mb-2">
+                      {group.label}
+                    </p>
+                    <ul className="flex flex-col gap-1.5 border-l pl-4 border-[var(--border-muted)]">
+                      {group.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex gap-2 text-sm text-[var(--text-muted)]"
+                        >
+                          <span className="text-[var(--accent)] opacity-70">
+                            ▹
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* credentials */}
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-[var(--text-muted)] mb-4">
+                certifications &amp; credentials
+              </p>
+
+              <a
+                href={CREDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 font-mono text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition"
+              >
+                <Award size={16} className="text-[var(--accent)]" />
+                verified badges on Credly
+                <ExternalLink
+                  size={12}
+                  className="opacity-60 group-hover:opacity-100 transition"
+                />
+              </a>
             </div>
 
             {/* CTA */}
