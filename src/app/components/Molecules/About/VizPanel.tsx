@@ -1,20 +1,23 @@
 "use client";
 
-import { useState } from "react";
 import FuzzyMembership from "@/app/components/Molecules/About/FuzzyMembership";
 import SignalSpectrum from "@/app/components/Molecules/About/SignalSpectrum";
 import AdaptiveFuzzyNet from "@/app/components/Molecules/About/AdaptiveFuzzyNet";
 
 const TABS = [
-  { id: "fuzzy", label: "fuzzy", component: FuzzyMembership },
   { id: "signal", label: "signal", component: SignalSpectrum },
+  { id: "fuzzy", label: "fuzzy", component: FuzzyMembership },
   { id: "anfis", label: "anfis", component: AdaptiveFuzzyNet },
 ] as const;
 
-type TabId = (typeof TABS)[number]["id"];
+export type TabId = (typeof TABS)[number]["id"];
 
-export default function VizPanel() {
-  const [active, setActive] = useState<TabId>("fuzzy");
+interface VizPanelProps {
+  active: TabId;
+  onChange: (id: TabId) => void;
+}
+
+export default function VizPanel({ active, onChange }: VizPanelProps) {
 
   return (
     <div
@@ -35,7 +38,7 @@ export default function VizPanel() {
             type="button"
             role="tab"
             aria-selected={active === tab.id}
-            onClick={() => setActive(tab.id)}
+            onClick={() => onChange(tab.id)}
             className={`flex-1 py-2 transition border-b ${
               active === tab.id
                 ? "text-[var(--accent)] border-[var(--accent)]"

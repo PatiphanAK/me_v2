@@ -1,10 +1,11 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import { Award, ExternalLink } from "lucide-react";
 import { withBasePath } from "@/app/helpers/helper";
 import Terminal from "@/app/components/Molecules/About/Terminal";
 import StatsGrid from "@/app/components/Molecules/About/StatsGrid";
-import VizPanel from "@/app/components/Molecules/About/VizPanel";
+import VizPanel, { TabId } from "@/app/components/Molecules/About/VizPanel";
 
 // ─── CONFIG ─────────────────────────────────────────────
 
@@ -12,7 +13,13 @@ const PROFILE = {
   name: "Patiphan Akkahadsri",
   location: "Bangkok, TH",
   status: "Open to opportunities",
-  avatar: "/assets/me/me.jpg",
+  avatar: "/assets/me/me_signal.jpg",
+  // one photo per visualization tab; tabs without one use avatar
+  avatars: {
+    signal: "/assets/me/me_signal.jpg",
+    fuzzy: "/assets/me/me_fuzzy.jpg",
+    anfis: "/assets/me/me_anfis.jpg",
+  } as Partial<Record<TabId, string>>,
   headline: {
     text: "Intelligent systems, from algorithms to",
     accent: "infrastructure.",
@@ -78,6 +85,8 @@ const AVATAR_SIZE = 88;
 // ─── MAIN ───────────────────────────────────────────────
 
 export default function About() {
+  const [viz, setViz] = useState<TabId>("signal");
+
   return (
     <section
       className="relative min-h-screen pt-8 md:pt-10 lg:pt-12 pb-16"
@@ -109,15 +118,21 @@ export default function About() {
                   height: AVATAR_SIZE,
                   border: "1px solid var(--border)",
                 }}
-                className="overflow-hidden "
+                className="relative overflow-hidden"
               >
-                <Image
-                  src={withBasePath(PROFILE.avatar)}
-                  alt={PROFILE.name}
-                  width={AVATAR_SIZE}
-                  height={AVATAR_SIZE}
-                  className="object-cover w-full h-full"
-                />
+                {/* crossfade between photos as the visualization tab changes */}
+                {(["signal", "fuzzy", "anfis"] as TabId[]).map((id) => (
+                  <Image
+                    key={id}
+                    src={withBasePath(PROFILE.avatars[id] ?? PROFILE.avatar)}
+                    alt={viz === id ? PROFILE.name : ""}
+                    width={AVATAR_SIZE}
+                    height={AVATAR_SIZE}
+                    className={`absolute inset-0 object-cover w-full h-full transition-opacity duration-500 ${
+                      viz === id ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
               </div>
 
               <div>
@@ -141,7 +156,7 @@ export default function About() {
             <Terminal lines={TERMINAL_LINES} speed={500} />
 
             {/* visualizations */}
-            <VizPanel />
+            <VizPanel active={viz} onChange={setViz} />
 
             {/* stats */}
             <StatsGrid stats={STATS} />
